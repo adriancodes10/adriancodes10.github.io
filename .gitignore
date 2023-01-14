@@ -13,5 +13,6 @@ yarn-error.log*
 *.orig.*
 web-build/
 src/assets/icons/3d\ icon.zip
+tw.js
 # macOS
 .DS_Store

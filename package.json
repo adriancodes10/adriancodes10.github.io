@@ -5,7 +5,7 @@
   "homepage": "https://adriancodes10.github.io",
   "scripts": {
     "deploy": "gh-pages -d web-build",
-    "predeploy": "expo export:web",
+    "predeploy": "expo build:web",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
