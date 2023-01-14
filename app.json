@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/memeji-thought.png",
+      "image": "./assets/memoji-thought.png",
       "resizeMode": "contain",
       "backgroundColor": "#024396"
     },
