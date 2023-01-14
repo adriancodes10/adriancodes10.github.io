@@ -1,7 +1,10 @@
+Queen/
 node_modules/
 .expo/
 dist/
 npm-debug.*
+yarn-debug.log*
+yarn-error.log*
 *.jks
 *.p8
 *.p12
@@ -9,6 +12,6 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-
+src/assets/icons/3d\ icon.zip
 # macOS
 .DS_Store
