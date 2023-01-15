@@ -1,5 +1,6 @@
 import { BlurView } from 'expo-blur';
 import { useLayoutEffect, useState } from 'react';
+import * as Linking from 'expo-linking';
 import { Text, View, Pressable, Button, Image } from 'react-native';
 import tw from '../../api/tailwind';
 const navLogo = require('../../assets/logos/logo-nobg.png');
@@ -83,10 +84,10 @@ export const NavigationBar = ({style,toggleSlider, navigationFunction}) => {
       {!mobileNav && (
         <Pressable
           style={tw`flex-row`}
-          onPress={() =>Linking.openURL('https://adriancodes.github.io')}>
+          onPress={() =>Linking.openURL('https://adriancodes10.github.io')}>
           <LogoSquare/>
           <Text
-            style={tw`text-2xl ml-2 lg:ml-0 xl:-ml-2 justify-self-start mr-4 self-center font-semibold whitespace-nowrap dark:text-white`}>
+            style={tw`text-2xl ml-2 lg:ml-1 xl:ml-3 justify-self-start mr-4 self-center font-semibold whitespace-nowrap dark:text-white`}>
             drianCodes
           </Text>
         </Pressable>
