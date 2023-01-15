@@ -20,60 +20,61 @@ export const FooterSection= ({style}) => {
         <View>
           <Text
             style={tw`mb-2 text-base lg:textlg font-semibold text-gray-700 uppercase dark:text-white`}>
-            Resources
+            
           </Text>
           <Pressable
             style={tw`px-2`}
-            onPress={() => Linking.openURL('https://flowbite.com/')}>
+            onPress={() => Linking.openURL('/')}>
             <Text style={tw`text-white text-sm md:base lg:text-lg`}>
-              React Native
+              Linkedin
+            </Text>
+          </Pressable>
+            <Pressable
+            style={tw`px-2`}
+            onPress={() => Linking.openURL('https://www.instagram.com/101wallstreet/')}>
+            <Text style={tw`text-white text-sm md:base lg:text-lg`}>
+              Instagram
+            </Text>
+          </Pressable>
+          
+        </View>
+        <View>
+          <Text
+            style={tw`mb-2 text-base lg:textlg font-semibold text-gray-700 uppercase dark:text-white`}>
+            Github
+          </Text>
+          <Pressable
+            style={tw`px-2`}
+            onPress={() => Linking.openURL('https//github.com/adriancodes10')}>
+            <Text style={tw`text-white text-sm md:base lg:text-lg`}>
+              Profile
             </Text>
           </Pressable>
           <Pressable
             style={tw`px-2`}
-            onPress={() => Linking.openURL('https://tailwindcss.com/')}>
+            onPress={() => Linking.openURL('https://github.com/adriancodes10/adriancodes.github.io/')}>
             <Text style={tw`text-white text-sm md:base lg:text-lg`}>
-              Swift
+              Repo
             </Text>
           </Pressable>
         </View>
         <View>
           <Text
             style={tw`mb-2 text-base lg:textlg font-semibold text-gray-700 uppercase dark:text-white`}>
-            Resources
+            Social
           </Text>
           <Pressable
             style={tw`px-2`}
-            onPress={() => Linking.openURL('https://flowbite.com/')}>
+            onPress={() => Linking.openURL('https://www.Behance.net')}>
             <Text style={tw`text-white text-sm md:base lg:text-lg`}>
-              Flowbite
+              Behance
             </Text>
           </Pressable>
           <Pressable
             style={tw`px-2`}
-            onPress={() => Linking.openURL('https://tailwindcss.com/')}>
+            onPress={() => Linking.openURL('https://dribbble.com/')}>
             <Text style={tw`text-white text-sm md:base lg:text-lg`}>
-              Tailwind CSS
-            </Text>
-          </Pressable>
-        </View>
-        <View>
-          <Text
-            style={tw`mb-2 text-base lg:textlg font-semibold text-gray-700 uppercase dark:text-white`}>
-            Resources
-          </Text>
-          <Pressable
-            style={tw`px-2`}
-            onPress={() => Linking.openURL('https://flowbite.com/')}>
-            <Text style={tw`text-white text-sm md:base lg:text-lg`}>
-              Flowbite
-            </Text>
-          </Pressable>
-          <Pressable
-            style={tw`px-2`}
-            onPress={() => Linking.openURL('https://tailwindcss.com/')}>
-            <Text style={tw`text-white text-sm md:base lg:text-lg`}>
-              Tailwind CSS
+              Dribbble
             </Text>
           </Pressable>
         </View>
