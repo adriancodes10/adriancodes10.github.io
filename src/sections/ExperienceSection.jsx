@@ -41,7 +41,7 @@ return (
       const {y} = event.nativeEvent.layout;
       updatePosition(y, 'experience');
     }}>
-    <View data-aos="fade" style={tw``}>
+    <View style={tw``}>
       <View style={tw`container sm:px-5 md:px-5 lg:px-14`}>
         <View style={tw` py-4 md:py-8 md:px-4 md:px-0`}>
           <Text
@@ -70,37 +70,47 @@ return (
                 </Text>
               </View>
               <View
-                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-gray-100  light:border-[#212425] dark:border-2`}>
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-gray-100  light:border-[#212425] dark:border-2 bg-bahamablue-600`}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
-                  2021
+                  2023
                 </Text>
                 <Text style={tw`text-xl dark:text-white`}>
-                  {'Social Justice '}
+                  {'Spacial Justice '}
                 </Text>
                 <Text style={tw`dark:text-[#b7b7b7]`}>
                   UCLA, Los Angeles, CA
                 </Text>
               </View>
               <View
-                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] dark:border-2`}>
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] dark:border-2 bg-bahamablue-500`}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
-                  2018
+                  2021
+                </Text>
+                <Text style={tw`text-xl dark:text-white`}>Echo Park Lake Research Collective</Text>
+                <Text style={tw`dark:text-[#b7b7b7]`}>
+                  UCLA, Los Angeles, CA
+                </Text>
+              </View>
+              <View
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] dark:border-2 bg-bahamablue-400`}>
+                <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
+                  2020
                 </Text>
                 <Text style={tw`text-xl dark:text-white`}>App Development</Text>
                 <Text style={tw`dark:text-[#b7b7b7]`}>
-                  Appacademy.io | online
+                  Appacademy.io 
                 </Text>
               </View>
               <View
-                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] dark:border-2`}>
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] dark:border-2 bg-bahamablue-600`}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
-                  2017
+                  2019
                 </Text>
                 <Text style={tw`text-xl dark:text-white`}>UX/UI Design</Text>
-                <Text style={tw`dark:text-[#b7b7b7]`}>Google Inc.</Text>
+                <Text style={tw`dark:text-[#b7b7b7]`}>Google Inc., Apple </Text>
               </View>
               <View
-                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] dark:border-2`}>
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] dark:border-2 bg-bahamablue-500`}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
                   2018
                 </Text>
@@ -108,7 +118,7 @@ return (
                 <Text style={tw`dark:text-[#b7b7b7]`}>Codecademy Online</Text>
               </View>
               <View
-                style={tw`bg-transparent py-4 pl-5 pr-3 mb-6 space-y-2 rounded-lg  dark:border-gray-100  light:border-[#212425] dark:border-2`}>
+                style={tw`bg-transparent py-4 pl-5 pr-3 mb-6 space-y-2 rounded-lg  dark:border-gray-100  light:border-[#212425] dark:border-2 bg-bahamablue-400`}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
                   2015
                 </Text>
@@ -118,7 +128,7 @@ return (
                 <Text style={tw`dark:text-[#b7b7b7]`}>UCA - Conway, AR</Text>
               </View>
               <View
-                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  dark:border-gray-100  light:border-[#212425] border-2`}>
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg  dark:border-gray-100  light:border-[#212425] border-2 bg-bahamablue-600`}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
                   2013
                 </Text>
@@ -148,9 +158,29 @@ return (
                 </Text>
               </View>
               <View
-                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-gray-100  light:border-[#212425] border-2`}>
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-gray-100  light:border-[#212425] border-2 bg-bahamablue-800`}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
-                  2021 - current
+                  09/2022 - current
+                </Text>
+                <Text style={tw`text-xl dark:text-white`}>
+                  Founder - CEO - CTO
+                </Text>
+                <Text style={tw`dark:text-[#b7b7b7]`}>Appit Software Development</Text>
+              </View>
+              <View
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-gray-100  light:border-[#212425] border-2 bg-bahamablue-700`}>
+                <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
+                  01/2022 - 08/22
+                </Text>
+                <Text style={tw`text-xl dark:text-white`}>
+                  App developer
+                </Text>
+                <Text style={tw`dark:text-[#b7b7b7]`}>Schoolade</Text>
+              </View>
+              <View
+                style={tw`bg-transparent py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-gray-100  light:border-[#212425] border-2 bg-bahamablue-600`}>
+                <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
+                  01/2021 - current
                 </Text>
                 <Text style={tw`text-xl dark:text-white`}>
                   Full Stack Developer
@@ -158,15 +188,15 @@ return (
                 <Text style={tw`dark:text-[#b7b7b7]`}>Freelance</Text>
               </View>
               <View
-                style={tw`py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] border-2`}>
+                style={tw`py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] border-2 bg-bahamablue-800 `}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
-                  2021
+                  01/2020 - 12/2021
                 </Text>
-                <Text style={tw`text-xl dark:text-white`}>App Developer</Text>
+                <Text style={tw`text-xl dark:text-white`}>Ruby on Rails App Developer</Text>
                 <Text style={tw`dark:text-[#b7b7b7]`}>Segura & Co.</Text>
               </View>
               <View
-                style={tw`py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] border-2`}>
+                style={tw`py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] border-2 bg-bahamablue-700 `}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
                   2020
                 </Text>
@@ -176,15 +206,27 @@ return (
                 <Text style={tw`dark:text-[#b7b7b7]`}>H&R Block Inc.</Text>
               </View>
               <View
-                style={tw`py-4 pl-5 pr-3 space-y-2 rounded-lg  dark:border-gray-100  light:border-[#212425] border-2`}>
+                style={tw`py-4 pl-5 pr-3 space-y-2 rounded-lg  mb-6 dark:border-gray-100  light:border-[#212425] border-2 bg-bahamablue-600 `}>
                 <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
-                  2018
+                  01/2018 - 01/2020
                 </Text>
                 <Text style={tw`text-xl dark:text-white`}>
                   Jr. Web Developer, Social Media Marketing Manager, Salesman
                 </Text>
                 <Text style={tw`dark:text-[#b7b7b7]`}>
                   Zoom Auto Sales, Inc.
+                </Text>
+              </View>
+              <View
+                style={tw`py-4 pl-5 pr-3 space-y-2 rounded-lg bg-bluelogo-700  dark:border-gray-100  light:border-[#212425] border-2 bg-bahamablue-800`}>
+                <Text style={tw`text-tiny text-gray-lite dark:text-[#b7b7b7]`}>
+                  01/2017 - 01/2018
+                </Text>
+                <Text style={tw`text-xl dark:text-white`}>
+                  Team Lead, Interpreter, Executive Assistant
+                </Text>
+                <Text style={tw`dark:text-[#b7b7b7]`}>
+                  Walter Woodward LLC
                 </Text>
               </View>
             </View>

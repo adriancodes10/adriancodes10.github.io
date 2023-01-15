@@ -20,11 +20,11 @@ export const FooterSection= ({style}) => {
         <View>
           <Text
             style={tw`mb-2 text-base lg:textlg font-semibold text-gray-700 uppercase dark:text-white`}>
-            
+            Social
           </Text>
           <Pressable
             style={tw`px-2`}
-            onPress={() => Linking.openURL('/')}>
+            onPress={() => Linking.openURL('https://www.linkedin/in/adriancodes')}>
             <Text style={tw`text-white text-sm md:base lg:text-lg`}>
               Linkedin
             </Text>
@@ -61,7 +61,7 @@ export const FooterSection= ({style}) => {
         <View>
           <Text
             style={tw`mb-2 text-base lg:textlg font-semibold text-gray-700 uppercase dark:text-white`}>
-            Social
+            Design
           </Text>
           <Pressable
             style={tw`px-2`}
