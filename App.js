@@ -14,7 +14,10 @@ import Animated, {
   useAnimatedScrollHandler,
   useAnimatedStyle,
   useSharedValue,
+  withSpring,
   withTiming,
+  interpolate,
+  Extrapolation,
 } from 'react-native-reanimated';
 
 import Sphere from './src/components/Sphere';
@@ -108,6 +111,8 @@ export default function App() {
   
 
     const actionBarStyle = useAnimatedStyle(() => {
+      const scale = interpolate(translateY.value, [0, 100], [1, 0.97], { extrapolateLeft: Extrapolation.EXTEND, extrapolateRight: Extrapolation.EXTEND });
+
       return {
         transform: [
           {
@@ -116,6 +121,12 @@ export default function App() {
               easing: Easing.inOut(Easing.ease),
             }),
           },
+          {scale: withSpring(scale, {
+            damping: 1,
+            stiffness: 490,
+            mass:80,
+            overshootClamping: true,
+          }) }
         ],
       };
     });
