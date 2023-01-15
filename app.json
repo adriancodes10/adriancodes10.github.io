@@ -3,9 +3,11 @@
     "name": "AdrianCodes",
     "slug": "AdrianCodes",
     "version": "1.0.0",
+    "description": "AdrianCodes porfolio react native app for Software/Application Developer based in Los Angeles California. Full Stack mobile app development. Featuring Three.js animation. Custom theme with Blur effects. ",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    
     "splash": {
       "image": "./assets/memoji-thought.png",
       "resizeMode": "contain",

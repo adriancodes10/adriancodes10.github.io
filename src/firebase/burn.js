@@ -4,7 +4,8 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // import { initializeApp } from "firebase/app";
-import { getDatabase,ref, onValue,set,push, remove } from "firebase/database";
+import { getDatabase, ref, onValue,set,push, remove } from "firebase/database";
+import { getPerformance } from "firebase/performance";
 // const {initializeApp} = require('firebase/app');
 const {initializeAppCheck, ReCaptchaV3Provider} = require('firebase/app-check');
 
@@ -57,7 +58,7 @@ const appCheck = initializeAppCheck(app, {
 const analytics = getAnalytics(app);
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app);
-
+const perf = getPerformance(app);
 // read data with onValue
 // const starCountRef = ref(db, 'users/' + postId + '/starCount');
 // onValue(starCountRef, (snapshot) => {
