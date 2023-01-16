@@ -430,7 +430,7 @@ return (
           <GestureDetector gesture={scaleHandler}>
             <Pressable
               style={[
-                tw`bg-gray-400 hover:bg-blue-500 mr-5 mt-5 border border-blue-500 hover:border-transparent rounded`,
+                tw`bg-bahamablue-400 hover:bg-bahamablue-600 mr-5 mt-5 border border-bahamablue-400 hover:border-transparent rounded`,
               ]}
               onPress={() => {
                 setTimeout(() => {
@@ -447,7 +447,7 @@ return (
         <Ani.View style={[{transform: [{scale: selectedAnim}]}]}>
           <Pressable
             style={[
-              tw`bg-gold-100 hover:bg-blue-500 mt-5  border-white-500 hover:border-transparent rounded`,
+              tw`bg-gold-100 hover:bg-blue-500 mt-5  border-whitelogo-500 hover:border-transparent rounded`,
             ]}
             onPress={() => {
               Ani.sequence([

@@ -560,8 +560,14 @@ const Info = ({purpose}) => {
     </View>
   );
 }
-import sendMessage from '../firebase/burn';
+import postToSlack from '../hooks/slackwebhook';
 const Details = () => {
+
+  const onError = (error) => console.log('errors',error);
+  const onSubmit = (data) => {
+    console.log('sending data in slider')
+    postToSlack(data);
+  }
   const {
     register,
     control,
@@ -615,8 +621,9 @@ const Details = () => {
 
         <Pressable
           // title="Submit"
-          onPress={handleSubmit(
-          sendMessage)}
+          // onPress={handleSubmit(
+          // onSubmit, onError)}
+          onPress={handleSubmit(postToSlack)}
           style={[
             tw`bg-blue-600 rounded w-[6rem] py-2 mt-[10px] mx-auto `,
             styles.button,
