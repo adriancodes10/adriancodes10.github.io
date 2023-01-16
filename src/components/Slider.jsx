@@ -166,7 +166,7 @@ const Purpose = ({purpose, }) => {
           <>
             <Text
               style={[
-                tw`text-sm font-semibold leading-tight mt-3 mb-2`,
+                tw`text-sm text-white font-semibold leading-tight mt-3 mb-2`,
                 styles.label,
               ]}>
               Position hiring and languages used (if known) Ex: "Full Stack
@@ -251,7 +251,7 @@ const Purpose = ({purpose, }) => {
               }}
             />
             {errors.projectType && <Text>{errors.projectType.message}</Text>}
-            <Text style={tw`text-sm leading-tight mt-3 mb-2`}>
+            <Text style={tw`text-sm text-white leading-tight mt-3 mb-2`}>
               What is the budget?
             </Text>
             <Controller

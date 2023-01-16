@@ -142,13 +142,13 @@ const postToSlack = async (message) => {
 }
       const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        // headers: { 'Content-Type': 'application/json' },
         body: {blockMessage}
       
        };
         try {
             await fetch(
-                'https://hooks.slack.com/services/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', requestOptions)
+                'https://hooks.slack.com/services/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', JSON.stringify(requestOptions))
                 .then(response => {
                     response.json()
                         .then(data => {
