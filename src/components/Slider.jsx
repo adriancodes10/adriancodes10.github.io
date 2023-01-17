@@ -43,6 +43,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 
 import useDimensions from '../hooks/useDimensions';
 import stateOptions from '../utilities/constants';
+import Send from '../firebase/burn';
 const textColor = '#2A3B38';
 const gray = '#A0A0A0';
 
@@ -281,6 +282,10 @@ const Purpose = ({purpose, }) => {
                   {
                     label: 'less than $2,000 ',
                     value: '<2000$',
+                  },
+                  {
+                    label: 'Unknown',
+                    value: 'unknown',
                   },
                 ]);
                 return (
@@ -560,13 +565,13 @@ const Info = ({purpose}) => {
     </View>
   );
 }
-import postToSlack from '../hooks/slackwebhook';
+
 const Details = () => {
 
   const onError = (error) => console.log('errors',error);
   const onSubmit = (data) => {
     console.log('sending data in slider')
-    postToSlack(data);
+    Send(data);
   }
   const {
     register,
@@ -623,7 +628,7 @@ const Details = () => {
           // title="Submit"
           // onPress={handleSubmit(
           // onSubmit, onError)}
-          onPress={handleSubmit(postToSlack)}
+          onPress={handleSubmit(Send)}
           style={[
             tw`bg-blue-600 rounded w-[6rem] py-2 mt-[10px] mx-auto `,
             styles.button,

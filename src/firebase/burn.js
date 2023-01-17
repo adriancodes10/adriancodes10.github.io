@@ -122,7 +122,7 @@ export function Send(message){
   console.log('Send(message) mess', message);
     const userId = `${message.firstName}-${message.lastName}-${timestamp}`;
     console.log('userId Send()', timestamp);
-  push(ref(db, '/messages'), {
+  push(ref(db, '/messages' + userId), {
     firstName: message.firstName,
     lastName: message.lastName,
     email: message.email,

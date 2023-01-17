@@ -7,7 +7,9 @@ import {  Alert } from 'react-native';
 
 // webhook url for #Clients channel in appit workspace
 // https://hooks.slack.com/services/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
-
+// webhook is invalidated after pushign to github during deployment w
+// webhook is secret
+// must call webhook from firebase function.
   
 const postToSlack = async (message) => {
   const blockMessage =   {
@@ -140,15 +142,16 @@ const postToSlack = async (message) => {
 		}
 	]
 }
+  const webhook = 'https://hooks.slack.com/services/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'
       const requestOptions = {
         method: 'POST',
-        // headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: {blockMessage}
       
        };
         try {
             await fetch(
-                'https://hooks.slack.com/services/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', JSON.stringify(requestOptions))
+                webhook, JSON.stringify(requestOptions))
                 .then(response => {
                     response.json()
                         .then(data => {
