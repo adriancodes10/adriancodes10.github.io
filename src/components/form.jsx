@@ -13,12 +13,18 @@ import useDimensions from "../hooks/useDimensions";
 import DropDownPicker from 'react-native-dropdown-picker'
 import stateOptions from "../utilities/constants";
 import sendMessage from "../firebase/burn";
+import postToSlack from "../hooks/slackwebhook";
 
  const onError = (error) => console.log('errors',error);
 const onSubmit = (data) => {
   console.log('data form', data )
   // sendMessage(data)
+  console.log('form sending mess')
   sendMessage(data);
+  console.log(' sent mess');
+  
+  postToSlack(data)
+  console.log('new channel message sent')
 }
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {

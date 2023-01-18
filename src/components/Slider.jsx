@@ -44,6 +44,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import useDimensions from '../hooks/useDimensions';
 import stateOptions from '../utilities/constants';
 import Send from '../firebase/burn';
+import postToSlak from '../hooks/slackwebhook'
 const textColor = '#2A3B38';
 const gray = '#A0A0A0';
 
@@ -572,6 +573,10 @@ const Details = () => {
   const onSubmit = (data) => {
     console.log('sending data in slider')
     Send(data);
+    console.log('data sent');
+    console.log('slackHook')
+    postToSlack(data);
+    console.log('slack sent')
   }
   const {
     register,
@@ -628,7 +633,7 @@ const Details = () => {
           // title="Submit"
           // onPress={handleSubmit(
           // onSubmit, onError)}
-          onPress={handleSubmit(Send)}
+          onPress={handleSubmit(onSubmit, onError)}
           style={[
             tw`bg-blue-600 rounded w-[6rem] py-2 mt-[10px] mx-auto `,
             styles.button,
