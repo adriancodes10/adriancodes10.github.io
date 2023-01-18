@@ -5,8 +5,8 @@ const image = require('../../assets/shapes/spheres.png')
 const image2 = require('../../assets/shapes/spheres2.png')
 const image3 = require('../../assets/shapes/pyramid.png')
 import tw from '../../api/tailwind';
-import {View, Text} from 'react-native';
-
+import {View, Text, Linking} from 'react-native';
+import { telNum } from '../../utilities/constants';
 import {Image, Pressable} from 'react-native-web';
 const wireframe = require('../../assets/screens/wireframe-travel-list.png')
 const wireframeAlt = require('../../assets/screens/wireframe-travel-list-alt.png')
@@ -44,7 +44,11 @@ export default function CTAImages({
         <View style={tw`lg:mt-0 lg:flex-shrink-0`}>
           <View style={tw`mt-12 inline-flex rounded-md shadow`}>
             <Pressable
-              style={tw`py-2 px-4  bg-blue-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-2/6 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg `}>
+              style={tw`py-2 px-4  bg-blue-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-2/6 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg `}
+              onPress={() => {
+                 Linking.openURL(`${telNum}`);
+              }}
+              >
               <Text style={tw`text-white font-semibold`}>
                 {buttonOptionPrimary}
               </Text>

@@ -141,10 +141,12 @@ const portfolio = [
   // },
 ]
 
-export const PortfolioAltSection = ({style, updatePosition, intensity=0, tint='light', }) => {
+export const PortfolioAltSection = ({style, updatePosition, intensity=60, tint='default', }) => {
 
 return (
-  <View
+  <BlurView
+    intensity={intensity}
+    tint={tint}
     style={style}
     onLayout={(event) => {
       const {y} = event.nativeEvent.layout;
@@ -359,5 +361,5 @@ return (
         </Text>
       </Pressable>
     </View>
-  </View>
+  </BlurView>
 );}

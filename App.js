@@ -111,16 +111,18 @@ export default function App() {
   
 
     const actionBarStyle = useAnimatedStyle(() => {
-      const scale = interpolate(translateY.value, [0, 100], [1, 0.97], { extrapolateLeft: Extrapolation.EXTEND, extrapolateRight: Extrapolation.EXTEND });
-
+      console.log('actionBarStyle called, translateY', translateY, translateY.value);
+      
+      const scale = interpolate(translateY.value, [0, 100], [1, 0.67], { extrapolateLeft: Extrapolation.EXTEND, extrapolateRight: Extrapolation.EXTEND });
+      console.log('actionBarStyle scale', scale);
       return {
         transform: [
-          // {
-          //   translateY: withTiming(translateY.value, {
-          //     duration: 750,
-          //     easing: Easing.inOut(Easing.ease),
-          //   }),
-          // },
+          {
+            translateY: withTiming(translateY.value, {
+              duration: 750,
+              easing: Easing.inOut(Easing.ease),
+            }),
+          },
           {scale: withSpring(scale, {
             damping: 1,
             stiffness: 490,
