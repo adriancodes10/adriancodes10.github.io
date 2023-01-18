@@ -399,7 +399,7 @@ return (
         <AnimatedText
           // entering={FadeIn}
           style={[
-            tw`absolute z-100 ml-4 h-fit md:my-0 md:mt-2 lg:mt-[18px] text-3xl md:text-4xl top-10 lg:text-5xl font-base text-gray-400 w-[80%]`,
+            tw`absolute z-100 ml-4 h-fit md:my-0 md:mt-2 lg:mt-[18px] text-3xl md:text-4xl top-10 lg:text-5xl font-base text-gray-400 w-[80%] xl:w-auto`,
             glo2Style,
             {
               color: 'violet',
@@ -422,7 +422,7 @@ return (
           tw`mt-1 ml-4 text-xl md:text-2xl lg:text-3xl md:mt-3 lg:mt-5 text-gray-500 font-semibold dark:text-gray-300`,
           // tw`header`
         ]}>
-        Let's Build Together
+        Let's Build
       </AnimatedText>
       {/* )} */}
       <View style={[tw`mx-4 flex-row`]}>
