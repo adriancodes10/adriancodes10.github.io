@@ -115,12 +115,12 @@ export default function App() {
 
       return {
         transform: [
-          {
-            translateY: withTiming(translateY.value, {
-              duration: 750,
-              easing: Easing.inOut(Easing.ease),
-            }),
-          },
+          // {
+          //   translateY: withTiming(translateY.value, {
+          //     duration: 750,
+          //     easing: Easing.inOut(Easing.ease),
+          //   }),
+          // },
           {scale: withSpring(scale, {
             damping: 1,
             stiffness: 490,
