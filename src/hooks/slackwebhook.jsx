@@ -142,7 +142,9 @@ const postToSlack = async (message) => {
 		}
 	]
 }
-  const webhook = 'https://hooks.slack.com/services/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'
+  const webhook = process.env.SLACK_WEBHOOK_URL
+  console.log('webhook process.env', webhook)
+  // console.log('secret.Sl', {{secrets.SLACK_WEBHOOK_URL}})
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
