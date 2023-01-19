@@ -44,7 +44,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import useDimensions from '../hooks/useDimensions';
 import stateOptions from '../utilities/constants';
 import Send from '../firebase/burn';
-import postToSlak from '../hooks/slackwebhook'
+import postToSlack from '../hooks/slackwebhook'
 const textColor = '#2A3B38';
 const gray = '#A0A0A0';
 

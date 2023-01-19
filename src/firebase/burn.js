@@ -111,7 +111,7 @@ function getTimeStamp() {
       ':' +
       today.getMilliseconds() +
       '-' +
-      today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+      today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
   console.log('today getimestamp(), today, timestamp', today, timestamp)
   return timestamp;
 }
