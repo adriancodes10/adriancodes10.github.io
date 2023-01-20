@@ -71,7 +71,6 @@ export const NavigationBar = ({style,toggleSlider, navigationFunction}) => {
     {name: 'Hire me', id: 'contact', href: '#Contact', current: false},
     // { name: 'Footer', id: 'footer', current: false },
   ];
-
   // const scale = useRef(new Animated.Value(0)).current
   const [mobileNav, setMobileNav] = useState(false);
 

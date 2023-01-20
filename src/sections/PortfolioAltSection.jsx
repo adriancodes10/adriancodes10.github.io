@@ -11,6 +11,8 @@ export default function App() {
   return <A href="https://google.com">Go to Google</A>;
 }
 import { BlurView} from 'expo-blur';
+// import { BlurView} from '@react-native-community/blur';
+// import { VibrancyView} from '@react-native-community/blur';
 import tw from '../api/tailwind.js';
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, Text, View,Image, Pressable, Button } from 'react-native';
@@ -145,9 +147,12 @@ export const PortfolioAltSection = ({style, updatePosition, intensity=60, tint='
 
 return (
   <BlurView
-    intensity={intensity}
-    tint={tint}
-    style={style}
+    blurType="light"
+    blurAmount={10}
+    reducedTransparencyFallbackColor="white"
+    // intensity={intensity}
+    // tint={tint}
+    style={[style]}
     onLayout={(event) => {
       const {y} = event.nativeEvent.layout;
       updatePosition(y, 'portfolio');

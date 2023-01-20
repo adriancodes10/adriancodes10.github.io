@@ -113,16 +113,16 @@ export default function App() {
     const actionBarStyle = useAnimatedStyle(() => {
       console.log('actionBarStyle called, translateY', translateY, translateY.value);
       
-      const scale = interpolate(translateY.value, [0, 100], [1, 0.67], { extrapolateLeft: Extrapolation.EXTEND, extrapolateRight: Extrapolation.EXTEND });
+      const scale = interpolate(translateY.value, [0, 100], [1, 0.97], { extrapolateLeft: Extrapolation.EXTEND, extrapolateRight: Extrapolation.EXTEND });
       console.log('actionBarStyle scale', scale);
       return {
         transform: [
-          {
-            translateY: withTiming(translateY.value, {
-              duration: 750,
-              easing: Easing.inOut(Easing.ease),
-            }),
-          },
+          // {
+          //   translateY: withTiming(translateY.value, {
+          //     duration: 750,
+          //     easing: Easing.inOut(Easing.ease),
+          //   }),
+          // },
           {scale: withSpring(scale, {
             damping: 1,
             stiffness: 490,
@@ -213,7 +213,7 @@ export default function App() {
       <Animated.View
         style={[
           tw.style(
-            `absolute bottom-5 mx-auto md:top-5 right-[6.5%]`,
+            `absolute bottom-5 mx-auto md:top-5 right-[6.5%] ios:bg-bluelogo-700 android:bg-bluelogo-700`,
             navBack == true ? {zIndex: '0'} : {zIndex: '1'}, {display: 'table'},
           ),
           actionBarStyle,
@@ -221,7 +221,7 @@ export default function App() {
         <NavigationBar
           style={[
             tw.style(
-              `nav glass-border px-3 justify-center md:justify-start lg:justify-evenly bg-bluelogo-700`
+              `nav glass-border px-3 justify-center md:justify-start lg:justify-evenly bg-bluelogo-700 ios:bg-bluelogo-700 android:bg-bluelogo-800`
             ),
           ]}
           navigationFunction={(name) => scrollHandler(name)}
@@ -242,7 +242,7 @@ export default function App() {
           toggleResume={toggleResume}
           style={[
             tw.style(
-              `section z-2 flex-column md:flex-row p-6 md:h-[500px] md:px-10 md:py-7 lg:px-20  lg:py-10 xl:px-25 mt-5 mb-10 md:mt-40 md:mb-20 min-h-[300px]`,
+              `section z-2 flex-column md:flex-row p-6 md:h-[500px] md:px-10 md:py-7 lg:px-20  lg:py-10 xl:px-25 mt-5 mb-10 md:mt-40 md:mb-20 min-h-[300px] ios:bg-bluelogo-700 android:bg-bluelogo-800`,
               tw.prefixMatch(`landscape`) && window.height < 500
                 ? `md:h-[80vh] md:mt-25`
                 : ''
@@ -256,7 +256,7 @@ export default function App() {
           style={tw.style(
             `section p-5 
             p-6 md:px-10 md:py-7 lg:px-10 lg:py-10
-            min-h-100 ios:h-[900px] my-10 md:my-20`,
+            min-h-100 ios:h-[800px] my-10 md:my-20 ios:bg-bluelogo-700 android:bg-bluelogo-800`,
             tw.prefixMatch('landscape') &&
               !tw.prefixMatch('md') &&
               `min-h-[400px]`
