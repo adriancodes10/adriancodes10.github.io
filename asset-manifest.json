@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/static/js/app.1e637bb8.chunk.js",
-    "app.js.map": "/static/js/app.1e637bb8.chunk.js.map",
+    "app.js": "/static/js/app.17337786.chunk.js",
+    "app.js.map": "/static/js/app.17337786.chunk.js.map",
     "runtime~app.js": "/static/js/runtime~app.27401809.js",
     "runtime~app.js.map": "/static/js/runtime~app.27401809.js.map",
-    "static/js/2.8d064431.chunk.js": "/static/js/2.8d064431.chunk.js",
-    "static/js/2.8d064431.chunk.js.map": "/static/js/2.8d064431.chunk.js.map",
+    "static/js/2.d1759263.chunk.js": "/static/js/2.d1759263.chunk.js",
+    "static/js/2.d1759263.chunk.js.map": "/static/js/2.d1759263.chunk.js.map",
     "fonts/FontAwesome.ttf": "/./fonts/FontAwesome.ttf",
     "favicon-16.png": "/favicon-16.png",
     "favicon-32.png": "/favicon-32.png",
@@ -13,7 +13,7 @@
     "index.html": "/index.html",
     "manifest.json": "/manifest.json",
     "serve.json": "/serve.json",
-    "static/js/2.8d064431.chunk.js.LICENSE.txt": "/static/js/2.8d064431.chunk.js.LICENSE.txt",
+    "static/js/2.d1759263.chunk.js.LICENSE.txt": "/static/js/2.d1759263.chunk.js.LICENSE.txt",
     "static/media/2023_Resume.png": "/static/media/2023_Resume.156639ac.png",
     "static/media/2023_Resume.pdf": "/static/media/2023_Resume.65fc7be2.pdf",
     "static/media/adrian-gradient-alt.png": "/static/media/adrian-gradient-alt.ee60954a.png",
@@ -135,6 +135,7 @@
     "static/media/ruby-flat.svg": "/static/media/ruby-flat.720c8a73.svg",
     "static/media/saly-rocket.png": "/static/media/saly-rocket.4294f2d5.png",
     "static/media/saly-vr.png": "/static/media/saly-vr.76ac882f.png",
+    "static/media/scene.gltf": "/static/media/scene.ec0044e6.gltf",
     "static/media/schoolade-card.png": "/static/media/schoolade-card.fdee6f5d.png",
     "static/media/schoolade-mockups.png": "/static/media/schoolade-mockups.f6203f57.png",
     "static/media/schoolade-selector.png": "/static/media/schoolade-selector.b05f1285.png",
@@ -155,6 +156,7 @@
     "static/media/socialmedia-selfie.png": "/static/media/socialmedia-selfie.0b6ac1c1.png",
     "static/media/solidity-light.png": "/static/media/solidity-light.bf0f36e4.png",
     "static/media/solidity.png": "/static/media/solidity.7f180cc7.png",
+    "static/media/spacerock.gltf": "/static/media/spacerock.4b4f1550.gltf",
     "static/media/sphere-dynamic-color.png": "/static/media/sphere-dynamic-color.557e7944.png",
     "static/media/spheres.png": "/static/media/spheres.855109c5.png",
     "static/media/spheres2.png": "/static/media/spheres2.6c917481.png",
@@ -177,7 +179,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.27401809.js",
-    "static/js/2.8d064431.chunk.js",
-    "static/js/app.1e637bb8.chunk.js"
+    "static/js/2.d1759263.chunk.js",
+    "static/js/app.17337786.chunk.js"
   ]
 }
