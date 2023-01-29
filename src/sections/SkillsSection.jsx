@@ -108,7 +108,7 @@ import Animated, { useSharedValue,
   Easing,
   withSpring, FadeInDown, FlipInYLeft} from 'react-native-reanimated';
 export const SkillsSection = ({style,updatePosition, intensity=20, tint='light', }) => {
-const techPng = require("../assets/coding/coding-office.png");
+// const techPng = require("../assets/coding/coding-office.png");
 
 return (
   <BlurView
