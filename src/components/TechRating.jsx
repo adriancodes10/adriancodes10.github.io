@@ -11,7 +11,7 @@ export default function RatingBar({language='no language found', rating='1.0', i
    ]}>
    <View style={tw`flex-row justify-between w-[70%] h-10 oveflow-visible items-center`}>
      <Text
-       style={tw.style(`relative text-lg md:text-xl md:2xl bottom-7 p-0 h-[45%] font-base text-gray-500 dark:text-gray-400`, )}>
+       style={tw.style(`relative text-lg md:text-xl md:2xl bottom-7 p-0 h-[45%] font-bold text-gray-500 dark:text-gray-200`, )}>
        {language}
      </Text>
      {/* <View style={tw.style(`h-full overlfow-visible` ) }> */}
@@ -34,7 +34,7 @@ export default function RatingBar({language='no language found', rating='1.0', i
           width: `${percentage}%`,  
         })}></View>
      </View>
-     <Text style={tw`relative top-[-20px] text-lg md:text-2xl md:text-3xl font-medium text-gray-500 dark:text-gray-400 z-100`}>
+     <Text style={tw`relative top-[-20px] text-lg md:text-2xl md:text-3xl font-bold text-white dark:text-gray-100 z-100`}>
        {rating}
      </Text>
    </View>

@@ -189,7 +189,7 @@ return (
           {'Nuzer.com | Ecommerce App'}
         </Text>
         <Text
-          style={tw`h-[15%] md:h-[10%] mt-2 text-sm md:text-base tracking-wider text-blue-500 uppercase dark:text-blue-400`}>
+          style={tw`h-[15%] md:h-[10%] mt-2 text-sm md:text-base tracking-wider text-blue-500 uppercase dark:text-bluelogo-850 font-semi`}>
           {'Typescript + React '}
         </Text>
       </Pressable>
@@ -215,7 +215,7 @@ return (
           {'Schoolade | Web App'}
         </Text>
         <Text
-          style={tw`h-[15%] md:h-[10%] mt-2 md:mt-0 text-sm md:text-base tracking-widertext-blue-500 uppercase dark:text-blue-400 `}>
+          style={tw`h-[15%] md:h-[10%] mt-2 md:mt-0 text-sm md:text-base tracking-widertext-blue-500 uppercase dark:text-bluelogo-850 font-semi`}>
           {'React Native'}
         </Text>
       </Pressable>
@@ -239,7 +239,7 @@ return (
           {'Segura & Co | Web App'}
         </Text>
         <Text
-          style={tw`mt-2 h-[15%] xl:h-[10%] text-sm md:text-base tracking-wider text-blue-500 uppercase dark:text-blue-400 `}>
+          style={tw`mt-2 h-[15%] xl:h-[10%] text-sm md:text-base tracking-wider text-blue-500 uppercase dark:text-bluelogo-850 font-semi `}>
           {'Ruby on Rails + Postgress + SCSS'}
         </Text>
       </Pressable>
@@ -260,7 +260,7 @@ return (
           {'Zoom Auto | Webpage'}
         </Text>
         <Text
-          style={tw`mt-2 h-[20%] lg:h-[10%] lg:mt-0 text-sm md:text-base tracking-wider text-blue-500 uppercase dark:text-blue-400  `}>
+          style={tw`mt-2 h-[20%] lg:h-[10%] lg:mt-0 text-sm md:text-base tracking-wider text-blue-500 uppercase dark:text-bluelogo-850 font-semi`}>
           {'Bootstrap + HTML/Javascript/SCSS'}
         </Text>
       </Pressable>
@@ -287,7 +287,7 @@ return (
           Non Profit | Webpage
         </Text>
         <Text
-          style={tw`h-[15%] mt-2 md:h-[20%] lg:h-[15%] text-sm xl:h-[10%] md:text-base tracking-wider text-blue-500 uppercase dark:text-blue-400 `}>
+          style={tw`h-[15%] mt-2 md:h-[20%] lg:h-[15%] text-sm xl:h-[10%] md:text-base tracking-wider text-blue-500 uppercase dark:text-bluelogo-850 font-semi`}>
           {'Bootstrap + HTML/JAVASCRIPT/SCSS'}
         </Text>
       </Pressable>
@@ -311,7 +311,7 @@ return (
           Professinal's Single Page App
         </Text>
         <Text
-          style={tw`h-[10%] mt-2 text-sm lg:mt-0 md:text-base tracking-wider text-blue-500 uppercase dark:text-blue-400 `}>
+          style={tw`h-[10%] mt-2 text-sm lg:mt-0 md:text-base tracking-wider text-blue-500 uppercase dark:text-bluelogo-850 font-semi`}>
           {'React'}
         </Text>
       </Pressable>
@@ -331,11 +331,11 @@ return (
           />
         </ScrollView>
         <Text
-          style={tw`h-[25%] mt-2 md:mt-4 lg:mt-2 lg:h[20%] xl:h-[10%] text-lg md:text-2xl font-semibold text-gray-800 capitalize dark:text-white `}>
+          style={tw`h-[25%] mt-2 md:mt-4 lg:mt-2 lg:h[20%] xl:h-[10%] text-lg md:text-2xl font-semibold text-gray-800 capitalize dark:text-gray-100 `}>
           Zoom Auto | About us webpage
         </Text>
         <Text
-          style={tw`h-[15%] md:h-[10%] mt-2 lg:mt-0 lg:h-[10%]text-sm md:text-base tracking-wider text-blue-500 uppercase dark:text-blue-400 `}>
+          style={tw`h-[15%] md:h-[10%] mt-2 lg:mt-0 lg:h-[10%]text-sm md:text-base tracking-wider text-blue-500 uppercase dark:text-bluelogo-850 font-semi `}>
           {'Ruby on Rails + Postgress + Heroku'}
         </Text>
       </Pressable>
@@ -357,11 +357,11 @@ return (
           />
         </ScrollView>
         <Text
-          style={tw`h-[20%] md:mt-4 text-lg md:text-2xl lg:h-[15%] font-semibold text-gray-800 capitalize dark:text-white `}>
+          style={tw`h-[20%] md:mt-4 text-lg md:text-2xl lg:h-[15%] font-semi text-gray-800 capitalize dark:text-gray-100`}>
           Segura & Co | Web App
         </Text>
         <Text
-          style={tw`h-[15%]  text-sm md:text-base lg:text-lg lg:h-[10%] tracking-wider text-blue-500 uppercase dark:text-blue-400 `}>
+          style={tw`h-[15%]  text-sm md:text-base lg:text-lg lg:h-[10%] tracking-wider text-blue-500 uppercase dark:text-bluelogo-850  `}>
           {'Ruby on Rails + Postgress + Heroku '}
         </Text>
       </Pressable>

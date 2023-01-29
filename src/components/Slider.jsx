@@ -66,8 +66,9 @@ const slides = [
 ];
 
 
-const Purpose = ({purpose, }) => {
-  const {register, control, watch, setValue, formState: {errors, isValid}} = useFormContext();
+const Purpose = () => {
+  const {register, control, watch, setValue, formState: {errors, isValid}, getValues} = useFormContext();
+  console.log('control, getValues', control, getValues('hiringGoal'))
     const registerOptionsPurpose = {
       positionDetails: {
         required: false,
@@ -126,11 +127,12 @@ const Purpose = ({purpose, }) => {
         </Text>
         <Controller
           name="hiringGoal"
+          // {...register("firstName")}
           control={control}
           render={({field}) => {
             console.log('field', field);
             const [open, setOpen] = useState(false);
-            const [pickerValue, setPickerValue] = useState(null);
+            const [pickerValue, setPickerValue] = useState(getValues('hiringGoal'));
             const [items, setItems] = useState([
               {label: 'Full-time', value: 'Full-time'},
               {label: 'Part-time', value: 'Part-time'},
@@ -208,7 +210,7 @@ const Purpose = ({purpose, }) => {
               render={({field}) => {
                 console.log('field projectType', field);
                 const [open, setOpen] = useState(false);
-                const [pickerValue, setPickerValue] = useState(null);
+                const [pickerValue, setPickerValue] = useState(getValues('projectType'));
                 const [items, setItems] = useState([
                   {
                     label: 'Both mobile and web app',
@@ -222,10 +224,10 @@ const Purpose = ({purpose, }) => {
                   {label: 'website', value: 'website'},
                   // {label: 'code review', value: 'code review'},
                   // {label: 'codebase work', value: 'codebase work'},
-                  {label: 'Logo', value: 'logo'},
+                  {label: 'UX/UI Design', value: 'Design'},
                   {
-                    label: 'Social media marketing',
-                    value: 'social media marketing',
+                    label: 'marketing',
+                    value: 'marketing',
                   },
                   {
                     label: 'web3 (blockchain, smart contracts, dApp',
@@ -757,7 +759,7 @@ const Slider = ({purpose, project}) => {
   const {window, } = useDimensions();
   const width = window.width;
   const slideWidth = width * 0.8;
-
+console.log('purpose, project', purpose, project)
  const methods = useForm({
    mode: 'onBlur',
    defaultValues: {
@@ -804,7 +806,8 @@ const Slider = ({purpose, project}) => {
           paddingHorizontal: (width - slideWidth) / 2,
           justifyContent: 'center',
         }}
-        onScroll={scrollHandler}>
+        onScroll={scrollHandler}
+        >
         {slides.map((slide, index) => {
           return (       
             <Slide

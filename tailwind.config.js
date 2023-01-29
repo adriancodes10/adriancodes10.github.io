@@ -227,6 +227,15 @@ module.exports = {
           display: 'flex',
         },
 
+        'bg-radial-pink': {
+           background: 'radial-gradient(circle, #FCE0FF, #be9ef4 100%)'
+        },
+        'bg-radial-blue': {
+           background: 'radial-gradient(circle, #FCE0FF, #be9ef4 100%)'
+        },
+        'bg-radial-blue-dark': {
+           background: 'radial-gradient(circle, #39a7f7, #024396 100%)'
+        },
         nav: {
           // opacity: '0.4',
           overflowX: 'hidden',

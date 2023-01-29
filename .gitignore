@@ -19,3 +19,17 @@ src/assets/icons/3d\ icon.zip
 .env
 # macOS
 .DS_Store
+src/assets/crystal.zip
+src/assets/documents/2023_Resume_Reduced_Size.pdf
+src/assets/documents/ResumeFocused.pdf
+assets/glob.glb
+assets/model.glb
+src/assets/coding/nft-avatar-alt.png
+src/assets/models/cloud__sun_anim.glb
+src/assets/models/gem.glb
+src/assets/models/glob.glb
+src/assets/models/lowpoly-aztec-pack.zip
+src/assets/models/lowpoly-aztec-pack/
+src/assets/models/lowpoly_aztec_pack.glb
+src/components/3js/Gem.jsx
+src/components/Blob.jsx

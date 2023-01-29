@@ -44,9 +44,11 @@ import LogoSquare from '../LogoSquare';
 
 
 
-export const NavigationBar = ({style,toggleSlider, navigationFunction}) => {
+export const NavigationBar = ({style,toggleSlider, navigationFunction, navOnTop}) => {
 
   const [active, setActive ] = useState('intro');
+  const elevation = useState(navOnTop);
+  // onTop = onTop
 
   const user = {
     name: 'Adrian',
@@ -73,12 +75,15 @@ export const NavigationBar = ({style,toggleSlider, navigationFunction}) => {
   ];
   // const scale = useRef(new Animated.Value(0)).current
   const [mobileNav, setMobileNav] = useState(false);
-
+console.log('onTop in nav', navOnTop)
   return (
      <BlurView
-    intensity={5}
-    tint={'dark'}
-    style={[style, {backdropFilter: 'saturate(1.1) blur(2px)'}]}
+    // intensity={60}
+    // tint={'default'}
+     blurType="light"
+    blurAmount={10}
+    reducedTransparencyFallbackColor="white"
+    style={[style,  tw.style(``, {zIndex: elevation})]}
     >
       {!mobileNav && (
         <Pressable

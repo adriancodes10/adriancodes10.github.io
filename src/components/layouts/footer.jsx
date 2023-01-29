@@ -3,6 +3,8 @@ import {View, Text, Pressable, Image } from 'react-native';
 import tw from "../../api/tailwind";
 import * as Linking from 'expo-linking';
 import LogoSquare from '../LogoSquare';
+import Animated,{ SlideInDown, SlideInUp } from 'react-native-reanimated';
+
 const footerLogo = require('../../assets/logos/adrian.png')
 export const FooterSection= ({style}) => {
   return (
@@ -80,10 +82,10 @@ export const FooterSection= ({style}) => {
         </View>
       </View>
       <View
-        style={tw` pt-4 px-2 flex-col md:flex-row md:items-center justify-between`}>
+        style={tw` pt-4 px-2 flex-col items-center justify-between`}>
         <Pressable onPress={() => toggleSlider()} style={tw``}>
           <Text style={tw`dark:text-white`}>
-            © {new Date().getFullYear()} Adrian™. All Rights Reserved.
+            © {new Date().getFullYear()} AdrianCodes™. All Rights Reserved.
           </Text>
         </Pressable>
         <View

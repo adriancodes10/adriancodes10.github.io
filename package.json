@@ -15,6 +15,7 @@
     "@expo/html-elements": "^0.2.2",
     "@expo/webpack-config": "^0.17.2",
     "@react-native-community/blur": "^4.3.0",
+    "@react-three/fiber": "^8.10.1",
     "debounce": "^1.2.1",
     "dom-to-image": "^2.6.0",
     "expo": "~47.0.6",

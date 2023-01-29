@@ -277,10 +277,10 @@ export default function Form({hiringGoal, projectType}) {
                     },
                     {label: 'web app only', value: 'web app'},
                     {label: 'website', value: 'website'},
-                    {label: 'Logo', value: 'logo'},
+                    {label: 'UX/UI design', value: 'design'},
                     {
-                      label: 'Social media marketing',
-                      value: 'social media marketing',
+                      label: 'marketing',
+                      value: 'marketing',
                     },
                     {
                       label: 'web3 (blockchain, smart contracts, dApp',

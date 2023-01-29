@@ -10,6 +10,7 @@ import {useState, useRef, useEffect, Fragment } from 'react';
 
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, {
+  SlideInDown, SlideInUp,SlideOutDown, SlideOutUp,
   Easing,
   useAnimatedScrollHandler,
   useAnimatedStyle,
@@ -20,9 +21,8 @@ import Animated, {
   Extrapolation,
 } from 'react-native-reanimated';
 
-import Sphere from './src/components/Sphere';
-
-
+import Gem from './src/components/3js/Gem';
+import SphereLiquid from './src/components/3js/SphereLiquid'
 
 import tw from './src/api/tailwind.js';
 import { useDeviceContext } from 'twrnc';
@@ -47,14 +47,26 @@ import CTAPlain from './src/components/CTA/CTAPlain';
 import CTASub from './src/components/CTA/CTASub';
 import CTATimer from './src/components/CTA/CTATimer';
 import useDimensions from './src/hooks/useDimensions';
+import BlueGem from './src/components/3js/gems';
+import Blob from './src/components/Blob';
 const resumePdf = require('./src/assets/documents/2023_Resume.pdf')
 const resumePng = require('./src/assets/documents/2023_Resume.png')
 // const beachImage = require('./src/assets/images/background-image.png')
 
+// 3eb46d, 7fb090, aca9b0, d29fd0, f691ef
+// #3eb46d, #7fb090, #aca9b0, #d29fd0, #f691ef
+
+// 3eb46d,7fb090,aca9b0,d29fd0,f691ef
+// #3eb46d,#7fb090,#aca9b0,#d29fd0,#f691ef
+
+// ["3eb46d","7fb090","aca9b0","d29fd0","f691ef"]
+// ["#3eb46d","#7fb090","#aca9b0","#d29fd0","#f691ef"]
+
 export default function App() {
   useDeviceContext(tw);
 
-  const [navBack, setNavBack] = useState(false);
+  // const [navBack, setNavBack] = useState(false);
+  
     const {window, screen} = useDimensions();
 
     useEffect(() => {
@@ -109,13 +121,14 @@ export default function App() {
    const isScrolling = useSharedValue(false);
    const translateY = useSharedValue(0);
   
-
+  let navOnTop = 1;
     const actionBarStyle = useAnimatedStyle(() => {
       console.log('actionBarStyle called, translateY', translateY, translateY.value);
-      
+      const elevation = navOnTop;
       const scale = interpolate(translateY.value, [0, 100], [1, 0.97], { extrapolateLeft: Extrapolation.EXTEND, extrapolateRight: Extrapolation.EXTEND });
       console.log('actionBarStyle scale', scale);
       return {
+        zIndex: elevation,
         transform: [
           // {
           //   translateY: withTiming(translateY.value, {
@@ -133,15 +146,19 @@ export default function App() {
       };
     });
 
-  
-  function checkScroll(position, threshhold=40) {
-    if (position > threshhold) {
-      navBack == false ?  
-      setNavBack(true): null;  
-    }  else if (position < threshhold){
-        navBack == true ? setNavBack(false):null;
-    }
-  }
+  // let navOnTop = 1
+  // function checkScroll(position, threshhold=40) {
+  //   if (position > threshhold) {
+
+  //   navOnTop = false;
+  //     // navBack == false ?  
+  //     // setNavBack(true): null;  
+  //   }  else if (position < threshhold){
+  //       // navBack == true ? setNavBack(false):null;
+  //       navOnTop = true
+  //     }
+  // }
+
   const AnimScrollHandler = useAnimatedScrollHandler({
     onScroll: (event) => {
       var currentOffset = event.contentOffset.y;
@@ -149,7 +166,7 @@ export default function App() {
       if (
         lastContentOffset.value > event.contentOffset.y 
       ) {
-        setNavBack(false);
+         navOnTop != 1 ? navOnTop = 1 : null
         if (event.layoutMeasurement.width < 689){
           translateY.value = 0;
         } else {
@@ -158,7 +175,8 @@ export default function App() {
       } else if (
         lastContentOffset.value < event.contentOffset.y 
       ) {
-        setNavBack(true)
+        // setNavBack(true)
+        navOnTop != 0 ? navOnTop = 0 : null
         if (event.layoutMeasurement.width < 689) {
           translateY.value = -100;
         }else {
@@ -180,9 +198,9 @@ export default function App() {
   return (
     // <ScrollViewPage />
     <GestureHandlerRootView style={tw`container overflow-hidden`}>
-      <Sphere
+      <Gem
         style={[
-          tw`absolute dark:bg-[#024396] light:bg-gold-50`,
+          tw`absolute bg-radial-blue-dark light:bg-gold-50`,
           {
             width: '100vw',
             height: '100vh',
@@ -191,6 +209,41 @@ export default function App() {
           },
         ]}
       />
+
+      {/* <BlueGem 
+        style={[
+          tw`absolute top-0 right-0 bg-radial-blue-dark light:bg-gold-50`,
+          {
+            width: '30vh',
+            height: '30vw',
+            position: 'fixed',
+            top: '0',
+          },
+        ]}
+      /> */}
+      {/* <Blob 
+        style={[
+          tw`absolute bottom-0 right-0 bg-radial-blue-dark light:bg-gold-50 border-outline z-10`,
+          {
+            width: '30vh',
+            height: '30vw',
+            position: 'fixed',
+            // top: '0',
+          },
+        ]}
+      /> */}
+      {/* <SphereLiquid 
+        style={[
+          tw`absolute bottom-0 left-0 bg-radial-blue-dark light:bg-gold-50`,
+          {
+            width: '50vh',
+            height: '50vw',
+            position: 'fixed',
+            top: '0',
+          },
+        ]}
+      />
+   */}
       {slideOpen && (
         <SlideOver
           style={[
@@ -214,7 +267,7 @@ export default function App() {
         style={[
           tw.style(
             `absolute bottom-5 mx-auto md:top-5 right-[6.5%] ios:bg-bluelogo-700 android:bg-bluelogo-700`,
-            navBack == true ? {zIndex: '0'} : {zIndex: '1'}, {display: 'table'},
+            {display: 'table'},
           ),
           actionBarStyle,
         ]}>
@@ -224,6 +277,7 @@ export default function App() {
               `nav glass-border px-3 justify-center md:justify-start lg:justify-evenly bg-bluelogo-700 ios:bg-bluelogo-700 android:bg-bluelogo-800`
             ),
           ]}
+          navOnTop={navOnTop}
           navigationFunction={(name) => scrollHandler(name)}
           toggleSlider={() => toggleSlider()}
         />
@@ -237,7 +291,12 @@ export default function App() {
         ref={ref}
         onScroll={AnimScrollHandler}
         scrollEventThrottle={30}
+        pagingEnabled={true}
         scrollToOverflowEnabled={true}>
+        {/* <Animated.View
+          entering={SlideInDown}
+          exiting={SlideOutDown}
+          >         */}
         <IntroSection
           toggleResume={toggleResume}
           style={[
@@ -251,6 +310,7 @@ export default function App() {
           updatePosition={updatePosition}
           contactMe={toggleSlider}
         />
+        {/* </Animated.View> */}
 
         <TechSection
           style={tw.style(
@@ -360,7 +420,7 @@ export default function App() {
         {/* <CTAImage /> */}
         {/* <CTASub /> */}
         {/* <CTATimer /> */}
-        <FooterSection style={tw`px-6 p-10 mt-10 md:mt-20`} />
+        <FooterSection style={tw`px-6 p-10 mt-10 mb-50 md:bg-60 md:mt-20`} />
       </Animated.ScrollView>
     </GestureHandlerRootView>
   );

@@ -13,7 +13,7 @@ import { Linking } from 'react-native';
 import tw from '../api/tailwind.js';
 // const { plugin } = require('twrnc');
 
-import Animated, { useSharedValue, interpolate,
+import Animated, { useSharedValue, interpolate, cancelAnimation,
   withTiming, withRepeat,
   withSequence, withDelay,
   useAnimatedStyle,
@@ -27,16 +27,17 @@ import Slider from '../components/slider.jsx';
   const coding = require('../assets/emoji/coding.png')
   const ecomShirt = require('../assets/coding/ecom-mobile-shirt.png')
   const chart = require('../assets/coding/components/chart.png')
-  const desktopgallery = require('../assets/coding/components/desktop-gallery.png')
-  const list = require('../assets/coding/components/list.png')
-  const mobilechart = require('../assets/coding/components/mobile-piechart.png')
-  const styling = require('../assets/coding/components/shapes-font.png')
-  const charting = require('../assets/coding/components/piechart.png')
+  // const desktopgallery = require('../assets/coding/components/desktop-gallery.png')
+  const imgList = require('../assets/coding/components/list.png')
+  const imgMobilechart = require('../assets/coding/components/mobile-piechart.png')
+  const imgStyling = require('../assets/coding/components/shapes-font.png')
+  const imgCharting = require('../assets/coding/components/piechart.png')
   // const styling = require('../assets/coding/components/shapes-font.png')
-  const browserpurle = require('../assets/coding/components/window-piechart-shape.png')
-  const browserred = require('../assets/coding/components/window-red-chart.png')
+  const imgBrowserpurle = require('../assets/coding/components/window-piechart-shape.png')
+  const imgBrowserred = require('../assets/coding/components/window-red-chart.png')
   const browserShapes = require('../assets/coding/components/window.png')
-
+  const nft = require('../assets/coding/nft-touch.png')
+ const webApp = require('../assets/coding/components/desktop-gallery.png')
 
 
 export const IntroSection = ({style, updatePosition, intensity=10, tint='dark', toggleResume }) => {
@@ -47,16 +48,19 @@ export const IntroSection = ({style, updatePosition, intensity=10, tint='dark', 
   // const randomWidth = useSharedValue(0);
    const {window, screen} = useDimensions();
   const [ showForm, setShowForm ] = useState(false);
-  let purpose = '';
-  let project = '';
+  //  var purpose = useRef('');
+  //  var project = useRef('');
+   const [sliderProps, setSliderProps] = useState({purpose: '',
+  project: '',})
+   var project = useRef('');
    const toggleForm = () => {
      setShowForm(!showForm);
    };
    
-    const [showOptions, setShowOptions ] = useState(false);
+    // const [showOptions, setShowOptions ] = useState(false);
     // const [selected, setSelected] = useState(false);
     const selectedAnim = useRef(new Ani.Value(1)).current;
-     const scaleDownAnimation = useSharedValue(1);
+    //  const scaleDownAnimation = useSharedValue(1);
     // const scaleOut = () => {
     //   let animation
     //   if(!toggle){
@@ -122,11 +126,10 @@ export const IntroSection = ({style, updatePosition, intensity=10, tint='dark', 
       //     },
       //   ],
       // };
-      const rotate = interpolate(ring.value,
-                                  [0,1,2], [0, 2, -2]);
-                            return {
-                              transform: [{rotate: `${rotate}deg`}],
-                            };
+      const rotate = interpolate(ring.value,[0,1,2], [0, 2, -2]);
+      return {
+        transform: [{rotate: `${rotate}deg`}],
+      };
     });
 
 
@@ -134,28 +137,74 @@ export const IntroSection = ({style, updatePosition, intensity=10, tint='dark', 
 
 
     const animated = useSharedValue(0);
-
+      const animated5 = useSharedValue(0);
+      const rStyle = useAnimatedStyle(() => {
+      // const translateY = interpolate(animated.value, [0,1], [0,20]);
+      // const translateX = interpolate(animated.value, [0,0.5, 1], [-5,0, 5]);
+      const rotate = interpolate(animated.value, [0,0.5, 1], [-2,0, 2]);
+      return {
+        transform: [
+          // {translateY},
+          //  {translateX}, 
+          {rotateZ: `${rotate}deg`}
+        ]
+      };
+    });
+    const animated2 = useSharedValue(0);
+       const rStyle2 = useAnimatedStyle(() => {
+      // const translateY = interpolate(animated.value, [0,1], [0,20]);
+      // const translateX = interpolate(animated.value, [0,0.5, 1], [-5,0, 5]);
+      const rotate = interpolate(animated.value, [0,0.5, 1], [-2,0, 2]);
+      return {
+        transform: [
+          // {translateY},
+          //  {translateX}, 
+          {rotateZ: `${rotate}deg`}
+        ]
+      };
+    }); 
+    const animated3 = useSharedValue(0);
+       const rStyle3 = useAnimatedStyle(() => {
+      // const translateY = interpolate(animated.value, [0,1], [0,20]);
+      // const translateX = interpolate(animated.value, [0,0.5, 1], [-5,0, 5]);
+      const rotate = interpolate(animated.value, [0,0.5, 1], [-2,0, 2]);
+      return {
+        transform: [
+          // {translateY},
+          //  {translateX}, 
+          {rotateZ: `${rotate}deg`}
+        ]
+      };
+    }); 
+    const animated4 = useSharedValue(0);
+       const rStyle4 = useAnimatedStyle(() => {
+      // const translateY = interpolate(animated.value, [0,1], [0,20]);
+      // const translateX = interpolate(animated.value, [0,0.5, 1], [-5,0, 5]);
+      const rotate = interpolate(animated.value, [0,0.5, 1], [-2,0, 2]);
+      return {
+        transform: [
+          // {translateY},
+          //  {translateX}, 
+          {rotateZ: `${rotate}deg`}
+        ]
+      };
+    }); 
 
     useEffect(()=> {
       animated.value = withRepeat(withTiming(1, {duration:2000}), -1, true);
     }, [])
 
-    const rStyle = useAnimatedStyle(() => {
-      const translateY = interpolate(animated.value, [0,1], [0,10]);
-      return {
-        transform: [{translateY}]
-      };
-    }); 
-    const imgStyle = useAnimatedStyle(() => {
-      const rotate = interpolate(
-                          animated.value,
-                          [0,1],
-                          [-10, -20],
-                        );
-                    return {
-                      transform: [{rotate: `${rotate}deg`}],
-                    };
-    });
+ 
+    // const imgStyle = useAnimatedStyle(() => {
+    //   const rotate = interpolate(
+    //                       animated5.value,
+    //                       [0,1],
+    //                       [-10, -20],
+    //                     );
+    //                 return {
+    //                   transform: [{rotate: `${rotate}deg`}],
+    //                 };
+    // });
 
     // const defaultSpringStyles = useAnimatedStyle(() => {
     //   return {
@@ -201,6 +250,7 @@ export const IntroSection = ({style, updatePosition, intensity=10, tint='dark', 
   //     scale: scale.value, //change the height property of the component
   //   };
   //   });
+  
   const tapHandler = Gesture.Tap();
   const scaleDownAnim = useSharedValue(1);
 
@@ -262,6 +312,7 @@ export const IntroSection = ({style, updatePosition, intensity=10, tint='dark', 
     //  ],
    };
  });
+
  const glo2Style = useAnimatedStyle(() => {
    return {
     //  shadowOpacity: interpolate(glo.value, [0,1], [0.3,1]),
@@ -331,22 +382,204 @@ export const IntroSection = ({style, updatePosition, intensity=10, tint='dark', 
     //  ],
    };
  });
- useEffect(() => {
-   ringg.value = withDelay(
-     500,
-     withRepeat(
-       withTiming(1, {
-         duration: 4000,
-       }),
-       -1,
-       false
-     )
-   );
- }, []);
+//  useEffect(() => {
+//    ringg.value = withDelay(
+//      500,
+//      withRepeat(
+//        withTiming(1, {
+//          duration: 4000,
+//        }),
+//        -1,
+//        false
+//      )
+//    );
+
+//  }, []);
+ const ReanimatedPressable = Animated.createAnimatedComponent(Pressable);
+   const boop = useSharedValue(1);
+   const boop2 = useSharedValue(1);
+   const boop3 = useSharedValue(1);
+   const boop4 = useSharedValue(1);
+   const boop5 = useSharedValue(1);
+   const boops = {
+    1: boop,
+    2: boop2, 
+    3: boop3, 
+    4: boop4,
+    5: boop5
+   }
+  //  const animateds = {
+  //   1: animated,
+  //   2: animated2,
+  //   3: animated3,
+  //   4: animated4,
+  //   5: animated5
+  //  }
+  //  console.log('boop1]', boops[1])
+
+  const boopStyle = useAnimatedStyle(
+    () => {
+      const scale = interpolate(boop.value,[1,5],
+                                            [1, 1.17])
+      //  const rotate = interpolate(
+      //                     boop.value,
+      //                     [1, 2.5, 5],
+      //                     [0, -5, 5],
+      //                   );
+      // const translateX = interpolate(boop.value, [1, 5], [-5,5])
+      return {
+      transform: [
+          { scale: scale },
+          // {rotate: `${rotate}deg`},
+          // {translateX}
+      ],
+      }
+  },
+    []
+  );
+
+
+  const boopStyle2 = useAnimatedStyle(
+    () => {
+      const scale = interpolate(boop2.value,[1,5],
+            [1, 1.17])
+              return {
+      transform: [
+          { scale: scale },
+          // {rotate: `${rotate}deg`},
+          // {translateX}
+      ],
+      }
+  },
+    []
+  );
+  const boopStyle3 = useAnimatedStyle(
+    () => {
+      const scale = interpolate(boop3.value,[1,5],
+            [1, 1.17])
+              return {
+      transform: [
+          { scale: scale },
+          // {rotate: `${rotate}deg`},
+          // {translateX}
+      ],
+      }
+  },
+    []
+  );
+  const boopStyle4 = useAnimatedStyle(
+    () => {
+      const scale = interpolate(boop4.value,[1,5],
+            [1, 1.17])
+              return {
+      transform: [
+          { scale: scale },
+          // {rotate: `${rotate}deg`},
+          // {translateX}
+      ],
+      }
+  },
+    []
+  );
+
+  const rStyle5 = useAnimatedStyle(
+    () => {
+      const rotate = interpolate(animated5.value, [0,0.5, 1], [-2,0, 2]);
+      return {
+        transform: [{rotateZ: `${rotate}deg`}]
+      }
+    }
+  )
+
+  const boopStyle5 = useAnimatedStyle(
+    () => {
+      const scale = interpolate(boop5.value,[1,5],
+            [1, 1.17])
+              return {
+      transform: [
+          { scale: scale },
+          // {rotate: `${rotate}deg`},
+          // {translateX}
+      ],
+      }
+  },
+    []
+  );
+
+  // when the user press only once, this will be triggered.
+  const pressableOnTap = (index) => {
+    boops[index].value = withSequence(
+      withTiming(5, {duration: 400}),
+      withTiming(1, {duration: 300})
+      
+    )
+  }
+  const pressableOnPress =(index) => {
+
+    // console.log('animateds', animateds[1], animated[2], animated[3], animated[4])
+    console.log('boops before', boops[1].value, boops[2].value, boops[3].value, boops[4].value)
+    // console.log('animateds', animateds[1].value, animated[2].value, animated[3].value, animated[4].value)
+    console.log(boops[index].value);
+
+    // cancelAnimation(animateds[index]);
+    // console.log('animateds', animateds[1], animated[2], animated[3], animated[4])
+
+    boops[index].value = withSequence(
+      withTiming(5, {duration: 400}),
+      // withTiming(1, {duration: 200}),
+    );
+    // console.log('animateds after', animateds[1].value, animated[2].value, animated[3].value, animated[4].value)
+    console.log('boops after', boops[1].value, boops[2].value, boops[3].value, boops[4].value)
+
+  };
+
+  // when the user doesn't release the press after delayLongPress time (300 in my case. 500 default),
+  // this will be triggered
+  const pressableOnLongPress = (index) => {
+
+    // heart scale will go from original value (1) to (1.3) and will reverse back (true).
+    // and since the withRepeat's number of times is -1, this will repeat indefinitely.
+    boops[index].value =
+    //  withRepeat(
+      withTiming(5, {duration: 500}), -1, true
+      // );
+
+    // call API here if needed.
+  };
+
+  // after either long press or single press, this will be triggered 
+  const pressableOnPressOut =  (index) => {
+    // since the press out could be called in the middle of the animation repeat (eg: could be 1.2 or 1.1 or 1),
+    // the animation will be cancelled first.
+    cancelAnimation(boops[index]);
+
+    // no matter where the value is, will return to original value of 1
+    boops[index].value = withTiming(1, {duration: 300});
+    // setTimeout(
+      // () => {
+        // cancelAnimation(boops[index])
+        // animateds[index].value = 0
+        // animateds[index].value = withRepeat(withTiming(1, {duration:2000}), -1, true);
+      // }
+      // , 400
+    // )
+    // the state change will happen here.
+    // setIsFavourite((val) => !val);
+
+    // if (!isFavorite) {
+    //   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    // }
+
+    // call API here if needed.
+  };
+
 return (
   <BlurView
-    intensity={intensity}
-    tint={tint}
+   blurType="light"
+    blurAmount={10}
+    reducedTransparencyFallbackColor="blue"
+    // intensity={intensity}
+    // tint={tint}
     style={style}
     onLayout={(event) => {
       const {y} = event.nativeEvent.layout;
@@ -516,8 +749,8 @@ return (
           },
         ]}
         onPress={() => {
-           purpose = 'Full-time';
-           project = '';
+           sliderProps.purpose = 'Full-time';
+           sliderProps.project = '';
           toggleForm();
         }}
         // title="Increase"
@@ -532,8 +765,8 @@ return (
           },
         ]}
         onPress={() => {
-           purpose = 'Project';
-           project = 'Mobile app';
+           sliderProps.purpose = 'Project';
+           sliderProps.project = 'Mobile app';
           
           // setShowOptions(!showOptions);
           toggleForm()
@@ -554,27 +787,148 @@ return (
         source={coding}
         style={[
           tw.style(
-            'block w-45 h-[269px] bottom-0 scale-85 md:scale-100',
-            tw.prefixMatch(`landscape`) && window.height < 500 && `scale-80`
+            'block w-45 h-[269px] -bottom-[58px] scale-85 md:scale-100 md:-bottom-[73px]',
+            tw.prefixMatch(`landscape`) && window.height < 500 && `scale-80 md:-bottom-[3px]`
           ),
           // rStyle, imgStyle
         ]}
       />
-      <Pressable
-        disabled={true}
+        <ReanimatedPressable 
+          onPressIn={() => pressableOnPress(5)}
+          onHoverIn={() => pressableOnPress(5)}
+          onHoverOut={() => pressableOnPressOut(5)}
+          onLongPress={() => pressableOnLongPress(5)}
+          onPressOut={() => pressableOnPressOut(5)}
+          delayLongPress={300}
+          hitSlop={20}
+        // disabled={true}
         onPress={() => {
-          purpose = 'Project';
-          project = 'mobile + web app';
-          setShowForm(true);
+          // pressableOnPress(3)
+          sliderProps.purpose = 'Project';
+          sliderProps.project = 'web app';
+          pressableOnTap(5)
+          setTimeout(() => {
+            toggleForm(true);
+          }, 700);
         }}
-        style={tw`flex-col absolute -top-30 -right-5 md:-top-15 md:-right-10`}>
+        style={[  
+          boopStyle5,
+        tw.style(`flex-col absolute -left-10 bottom-[45%] md:-left-20`, tw.prefixMatch(`landscape`) && window.height < 500 && `md:-left-[18%]`),
+       
+        ]}>
+
+      <Animated.Image
+        entering={FadeInDown.delay(1500).duration(2000)}
+        source={webApp}
+        style={[
+             rStyle,
+          tw.style(
+            '  h-35 w-35 scale-75 dropShadow ',
+            tw.prefixMatch(`landscape`) &&
+              window.height < 500 &&
+              `border-3 border-white h-30 w-30`
+          ),
+
+        
+          // imgStyle,
+        ]}
+      />
+       {true && (
+          <AnimatedText
+            key={'dfak'}
+            // entering={FadeInDown}
+            // index={indexList['Mobile app']}
+            // layout={Layout.easing(Easing.bounce).delay(index * 100)}
+            // exiting={FadeOutRight}
+            style={tw`z-30 text-lg text-center text-white font-semibold`}>
+            Web app
+          </AnimatedText>
+        )}
+
+        </ReanimatedPressable>
+               <ReanimatedPressable 
+          onPressIn={() => pressableOnPress(2)}
+          onHoverIn={() => pressableOnPress(2)}
+          onHoverOut={() => pressableOnPressOut(2)}
+          onLongPress={() => pressableOnLongPress(2)}
+          onPressOut={() => pressableOnPressOut(2)}
+          delayLongPress={300}
+          hitSlop={20}
+        // disabled={true}
+        onPress={() => {
+          // pressableOnPress(2)
+          sliderProps.purpose = 'Project';
+          sliderProps.project = 'web3';
+          pressableOnTap(2)
+          setTimeout(() => {
+          setShowForm(true);
+            // toggleForm(true);
+          }, 700);
+        }}
+        style={[
+          boopStyle2,
+        tw.style(`flex-col absolute -left-10 md:-left-20 bottom-[5%]`, tw.prefixMatch(`landscape`) && window.height < 500 && `md:-bottom-[8%] md:-left-[23%]`, ),
+       
+           ]}>
+        <Animated.Image
+          
+          // entering={FadeInDown.delay(500).duration(2000)}
+          source={nft}
+          resizeMethod={'scale'}
+          style={[
+            // ringStyle,
+            {transform: [{scaleX: -1}]},
+            rStyle,
+          
+             tw.style(
+            'h-30 w-30 scale-75 z-20 dropShadow',
+            tw.prefixMatch(`landscape`) &&
+              window.height < 500 &&
+              `h-30 w-30 `
+          ),
+          ]}
+        />
+        {true && (
+          <AnimatedText
+            key={'dfak'}
+            entering={FadeInDown}
+            // index={indexList['Mobile app']}
+            // layout={Layout.easing(Easing.bounce).delay(index * 100)}
+            exiting={FadeOutRight}
+            style={tw`z-30 text-lg text-center text-white font-semibold`}>
+            Web3 
+            {/* <Text>{'(Smart Contracts \n + \n blockchain)'}</Text> */}
+          </AnimatedText>
+        )}
+      </ReanimatedPressable>
+
+       <ReanimatedPressable 
+          onPressIn={() => pressableOnPress(4)}
+          onHoverIn={() => pressableOnPress(4)}
+          onHoverOut={() => pressableOnPressOut(4)}
+          onLongPress={() => pressableOnLongPress(4)}
+          onPressOut={() => pressableOnPressOut(4)}
+          delayLongPress={300}
+          hitSlop={20}
+        // disabled={true}
+        onPress={() => {
+          sliderProps.purpose = 'Project';
+          sliderProps.project = 'mobile + web app';
+          pressableOnTap(4)
+          setTimeout(() => {
+            toggleForm(true);
+          }, 700);
+        }}
+        style={[
+          boopStyle4,
+             tw`flex-col absolute bottom-[45%]  -right-5  md:-right-10`]}>
         <Animated.Image
           entering={FadeInDown.delay(500).duration(2000)}
           source={ecomShirt}
           resizeMethod={'scale'}
           style={[
-            ringStyle,
-            // rStyle,
+            // ringStyle,
+                rStyle,
             tw.style(
               'z-20 h-40 w-20 dropShadow',
               tw.prefixMatch(`landscape`) &&
@@ -583,66 +937,80 @@ return (
             ),
           ]}
         />
-        {showOptions && (
+        {true && (
+          <AnimatedText
+            key={'dfak'}
+            // entering={FadeInDown}
+            // index={indexList['Mobile app']}
+            // layout={Layout.easing(Easing.bounce).delay(index * 100)}
+            // exiting={FadeOutRight}
+            style={tw`z-30 text-lg text-white font-semibold`}>
+            Mobile app
+          </AnimatedText>
+        )}
+      </ReanimatedPressable>
+      {/* <View> */}
+
+  
+        {/* </View> */}
+
+ 
+      <ReanimatedPressable 
+          onPressIn={() => pressableOnPress(3)}
+          onHoverIn={() => pressableOnPress(3)}
+          onHoverOut={() => pressableOnPressOut(3)}
+          onLongPress={() => pressableOnLongPress(3)}
+          onPressOut={() => pressableOnPressOut(3)}
+          delayLongPress={300}
+          hitSlop={20}
+        // disabled={true}
+        onPress={() => {
+          // pressableOnPress(3)
+          sliderProps.purpose = 'Project';
+          sliderProps.project = 'Design';
+          pressableOnTap(3)
+          setTimeout(() => {
+            toggleForm(true);
+          }, 700);
+        }}
+        style={[
+          boopStyle3,
+          tw.style(`flex-col absolute -right-10 bottom-[5%] md:-right-22`, tw.prefixMatch(`landscape`) && window.height < 500 && `md:-bottom-[8%] md:-right-[21%]`),,
+       
+        ]}>
+
+      <Animated.Image
+        entering={FadeInDown.delay(1500).duration(2000)}
+        source={browserShapes}
+        style={[
+             rStyle,
+          tw.style(
+            '  h-35 w-35 scale-75 dropShadow ',
+            tw.prefixMatch(`landscape`) &&
+              window.height < 500 &&
+              `border-3 border-white h-30 w-30`
+          ),
+
+        
+          // imgStyle,
+        ]}
+      />
+       {true && (
           <AnimatedText
             key={'dfak'}
             entering={FadeInDown}
             // index={indexList['Mobile app']}
             // layout={Layout.easing(Easing.bounce).delay(index * 100)}
             exiting={FadeOutRight}
-            style={tw`z-30 text-lg text-white font-semibold`}>
-            Mobile app
+            style={tw`z-30 text-lg text-center text-white font-semibold`}>
+            Design
           </AnimatedText>
         )}
-      </Pressable>
 
-      <Animated.Image
-        entering={FadeInDown.delay(1500).duration(2000)}
-        source={styling}
-        style={[
-          tw.style(
-            'h-35 w-35 absolute -top-15 -left-15 md:-top-15 md:-left-10 z-20 dropShadow',
-            tw.prefixMatch(`landscape`) &&
-              window.height < 500 &&
-              `border-3 border-white h-30 w-30`
-          ),
-
-          ringStyle,
-        ]}
-      />
-
-      <Animated.Image
-        entering={FadeInDown.delay(1500).duration(2000)}
-        resizeMethod={'scale'}
-        source={browserpurle}
-        style={[
-          tw.style(
-            'absolute -left-18 h-35 w-35 md:-left-30 scale-75 dropShadow bottom-[40%]',
-            tw.prefixMatch(`landscape`) && window.height < 500 && `h-30 w-30`
-          ),
-
-          imgStyle,
-          rStyle,
-        ]}
-      />
-
-      <Animated.Image
-        entering={FadeInDown.delay(1500).duration(2000)}
-        source={charting}
-        style={[
-          tw.style(
-            'absolute -right-18 h-35 w-35 scale-75 dropShadow bottom-[40%] md:-right-30',
-            tw.prefixMatch(`landscape`) &&
-              window.height < 500 &&
-              `border-3 border-white h-30 w-30`
-          ),
-
-          rStyle,
-          imgStyle,
-        ]}
-      />
-
-      <Animated.Image
+        </ReanimatedPressable>
+        
+    
+      {/* <Animated.Image
         entering={FadeInDown.delay(1500).duration(2000)}
         source={list}
         style={[
@@ -655,9 +1023,9 @@ return (
           imgStyle,
           ringStyle,
         ]}
-      />
+      /> */}
 
-      <Animated.Image
+      {/* <Animated.Image
         entering={FadeInDown.delay(1500).duration(2000)}
         source={mobilechart}
         style={[
@@ -669,9 +1037,9 @@ return (
           ),
           ringStyle,
         ]}
-      />
+      /> */}
 
-      <Pressable
+      {/* <Pressable
         style={[
           tw`mt-2 sectionButton bg-blue-500 font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg`,
           {
@@ -682,7 +1050,7 @@ return (
         // title="Increase"
       >
         <Text style={tw`text-white`}>Increase</Text>
-      </Pressable>
+      </Pressable> */}
     </View>
     <Modal
       animationType="fade"
@@ -704,7 +1072,7 @@ return (
           style={tw`py-2 px-3 top-5 right-5 mb-4 bg-blue-800 w-30 self-end rounded-lg`}>
           <Text style={tw`text-white font-bold text-lg mx-auto`}>Close</Text>
         </Pressable>
-        <Slider hiringGoal={purpose} projectType={project} />
+        <Slider purpose={sliderProps.purpose} project={sliderProps.project} />
       </View>
       {/* </BlurView> */}
     </Modal>

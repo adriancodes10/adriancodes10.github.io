@@ -47,13 +47,13 @@ const app = initializeApp(firebaseConfig);
 // Pass your reCAPTCHA v3 site key (public key) to activate(). Make sure this
 // key is the counterpart to the secret key you set in the Firebase console.
 
-const appCheck = initializeAppCheck(app, {
-  provider: new ReCaptchaV3Provider('6LfG0AwkAAAAANKLLDRPuUXmJSR6BHjolIcamlq3C'),
+// const appCheck = initializeAppCheck(app, {
+  // provider: new ReCaptchaV3Provider('6LfG0AwkAAAAANKLLDRPuUXmJSR6BHjolIcamlq3C'),
 
   // Optional argument. If true, the SDK automatically refreshes App Check
   // tokens as needed.
-  isTokenAutoRefreshEnabled: true,
-});
+  // isTokenAutoRefreshEnabled: true,
+// });
 
 const analytics = getAnalytics(app);
 // Initialize Realtime Database and get a reference to the service
@@ -109,9 +109,10 @@ function getTimeStamp() {
       ':' +
       today.getSeconds() +
       ':' +
-      today.getMilliseconds() +
-      '-' +
-      today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+      today.getMilliseconds();
+    const month = today.getMonth() + 1; 
+    console.log('month');
+      timestamp = timestamp + '-' + today.getFullYear() + '-' + month +'-' + today.getDate();
   console.log('today getimestamp(), today, timestamp', today, timestamp)
   return timestamp;
 }
