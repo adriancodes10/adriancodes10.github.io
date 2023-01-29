@@ -17,14 +17,14 @@ import postToSlack from "../hooks/slackwebhook";
 
  const onError = (error) => console.log('errors',error);
 const onSubmit = (data) => {
-  console.log('data form', data )
+  // console.log('data form', data )
   // sendMessage(data)
-  console.log('form sending mess')
+  // console.log('form sending mess')
   sendMessage(data);
-  console.log(' sent mess');
+  // console.log(' sent mess');
   
-  postToSlack(data)
-  console.log('new channel message sent')
+  // postToSlack(data)
+  // console.log('new channel message sent')
 }
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
@@ -185,7 +185,7 @@ export default function Form({hiringGoal, projectType}) {
             name="hiringGoal"
             control={control}
             render={({field}) => {
-              console.log('field', field);
+              // console.log('field', field);
               const [open, setOpen] = useState(false);
               const [pickerValue, setPickerValue] = useState(field.value);
               const [items, setItems] = useState([
@@ -193,9 +193,9 @@ export default function Form({hiringGoal, projectType}) {
                 {label: 'Part-time', value: 'Part-time'},
                 {label: 'Project', value: 'Project'},
               ]);
-              {
-                console.log('field hringfor');
-              }
+              // {
+              //   console.log('field hringfor');
+              // }
               return (
                 <DropDownPicker
                   open={open}
@@ -206,7 +206,7 @@ export default function Form({hiringGoal, projectType}) {
                   setItems={setItems}
                   theme="DARK"
                   onSelectItem={(item) => {
-                    console.log('dropdown on selectItem item', item);
+                    // console.log('dropdown on selectItem item', item);
                     setValue('hiringGoal', item.value);
                   }}
                   labelStyle={{
@@ -224,7 +224,7 @@ export default function Form({hiringGoal, projectType}) {
               );
             }}
           />
-          {console.log('field positionDetails')}
+          {/* {console.log('field positionDetails')} */}
           {hiring != 'Project' && (
             <>
               <Text style={[tw`text-xs leading-tight mt-2`, styles.label]}>
@@ -247,13 +247,13 @@ export default function Form({hiringGoal, projectType}) {
                   />
                 )}
               />
-              {console.log('field end positionDetails')}
+              {/* {console.log('field end positionDetails')} */}
               {errors.positionDetails?.type === 'maxLength' && (
                 <Text>Input is too long must be less than 100 characters</Text>
               )}
             </>
           )}
-          {console.log('field b4projectType')}
+          {/* {console.log('field b4projectType')} */}
           {hiring && hiring == 'Project' && (
             <>
               <Text style={tw`text-xs leading-tight mt-2`}>
@@ -263,7 +263,7 @@ export default function Form({hiringGoal, projectType}) {
                 name="projectType"
                 control={control}
                 render={({field}) => {
-                  console.log('field projectType', field);
+                  // console.log('field projectType', field);
                   const [open, setOpen] = useState(false);
                   const [pickerValue, setPickerValue] = useState(field.value);
                   const [items, setItems] = useState([
@@ -287,7 +287,7 @@ export default function Form({hiringGoal, projectType}) {
                       value: 'web3',
                     },
                   ]);
-                  console.log('projectType dropdown');
+                  // console.log('projectType dropdown');
                   return (
                     <DropDownPicker
                       // style={tw`w-[6rem]`}
@@ -299,7 +299,7 @@ export default function Form({hiringGoal, projectType}) {
                       setItems={setItems}
                       theme="DARK"
                       onSelectItem={(item) => {
-                        console.log('projectType dropdown onselect item', item);
+                        // console.log('projectType dropdown onselect item', item);
                         setValue('projectType', item.value);
                       }}
                       zIndex={2000}
@@ -308,7 +308,7 @@ export default function Form({hiringGoal, projectType}) {
                   );
                 }}
               />
-              {console.log('field budget')}
+              {/* {console.log('field budget')} */}
               {errors.projectType && <Text>{errors.projectType.message}</Text>}
               {console.log('before budget')}
 
@@ -319,7 +319,7 @@ export default function Form({hiringGoal, projectType}) {
                 name="budget"
                 control={control}
                 render={({field}) => {
-                  console.log('field budget', field);
+                  // console.log('field budget', field);
                   const [open, setOpen] = useState(false);
                   const [pickerValue, setPickerValue] = useState(field.value);
                   const [items, setItems] = useState([
@@ -354,7 +354,7 @@ export default function Form({hiringGoal, projectType}) {
                       setItems={setItems}
                       theme="DARK"
                       onSelectItem={(item) => {
-                        console.log('budget onselect item', item);
+                        // console.log('budget onselect item', item);
                         setValue('budget', item.value);
                       }}
                       zIndex={1000}
@@ -366,7 +366,7 @@ export default function Form({hiringGoal, projectType}) {
             </>
           )}
         </View>
-        {console.log('b4 phonenumber')}
+        {/* {console.log('b4 phonenumber')} */}
         <View>
           <Controller
             control={control}
@@ -384,7 +384,7 @@ export default function Form({hiringGoal, projectType}) {
             )}
             name="phoneNumber"
           />
-          {console.log('field after phoneNum')}
+          {/* {console.log('field after phoneNum')} */}
           {errors.phoneNumber?.type === 'pattern' && (
             <Text>{errors.phoneNumber.message}</Text>
           )}
@@ -421,7 +421,7 @@ export default function Form({hiringGoal, projectType}) {
             )}
             name="lastName"
           />
-          {console.log('field firstnae')}
+          {/* {console.log('field firstnae')} */}
           {errors.lastName && <Text>{errors.lastName.message}</Text>}
           <Controller
             control={control}
@@ -448,7 +448,7 @@ export default function Form({hiringGoal, projectType}) {
             name="state"
             control={control}
             render={({field}) => {
-              console.log('field state', field);
+              // console.log('field state', field);
               const [open, setOpen] = useState(false);
               const [pickerValue, setPickerValue] = useState(null);
               const [items, setItems] = useState(stateOptions);
@@ -464,7 +464,7 @@ export default function Form({hiringGoal, projectType}) {
                   theme="DARK"
                   placeholder="State"
                   onSelectItem={(item) => {
-                    console.log('state item', item);
+                    // console.log('state item', item);
                     setValue('state', item.value);
                   }}
                   zIndex={1000}
@@ -502,7 +502,7 @@ export default function Form({hiringGoal, projectType}) {
           </Pressable>
         </View>
       </View>
-      {console.log('end form')}
+      {/* {console.log('end form')} */}
     </View>
   );
 }

@@ -112,7 +112,8 @@ export default function App() {
  
       
     } else {
-      console.log('sectionName not recognized in object keys');
+      // console.log('sectionName not recognized in object keys');
+      return
     }
   };
 
@@ -123,10 +124,10 @@ export default function App() {
   
   let navOnTop = 1;
     const actionBarStyle = useAnimatedStyle(() => {
-      console.log('actionBarStyle called, translateY', translateY, translateY.value);
+      // console.log('actionBarStyle called, translateY', translateY, translateY.value);
       const elevation = navOnTop;
       const scale = interpolate(translateY.value, [0, 100], [1, 0.97], { extrapolateLeft: Extrapolation.EXTEND, extrapolateRight: Extrapolation.EXTEND });
-      console.log('actionBarStyle scale', scale);
+      // console.log('actionBarStyle scale', scale);
       return {
         zIndex: elevation,
         transform: [
@@ -186,11 +187,11 @@ export default function App() {
       lastContentOffset.value = event.contentOffset.y;
     },
     onBeginDrag: (e) => {
-      console.log('onbeginDrag')
+      // console.log('onbeginDrag')
       isScrolling.value = true;
     },
     onEndDrag: (e) => {
-       console.log('onEnDrag');
+      //  console.log('onEnDrag');
       isScrolling.value = false;
     },
   });

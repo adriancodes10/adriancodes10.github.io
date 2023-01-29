@@ -68,7 +68,7 @@ const slides = [
 
 const Purpose = () => {
   const {register, control, watch, setValue, formState: {errors, isValid}, getValues} = useFormContext();
-  console.log('control, getValues', control, getValues('hiringGoal'))
+  // console.log('control, getValues', control, getValues('hiringGoal'))
     const registerOptionsPurpose = {
       positionDetails: {
         required: false,
@@ -82,13 +82,13 @@ const Purpose = () => {
       },
     };
     const hiring = watch('hiringGoal');
-      console.log(
-        'registerOptions PURPOSE',
-        registerOptionsPurpose,
+      // console.log(
+        // 'registerOptions PURPOSE',
+        // registerOptionsPurpose,
         // registerOptionsPurpose.email,
         // registerOptionsPurpose.firstName,
-        registerOptionsPurpose.positionDetails
-      );
+        // registerOptionsPurpose.positionDetails
+      // );
   return (
     <View style={[tw`flex-col-reverse md:flex-row w-[80vw] md:w-[500px]`]}>
       {/* <Animated.Image
@@ -130,7 +130,7 @@ const Purpose = () => {
           // {...register("firstName")}
           control={control}
           render={({field}) => {
-            console.log('field', field);
+            // console.log('field', field);
             const [open, setOpen] = useState(false);
             const [pickerValue, setPickerValue] = useState(getValues('hiringGoal'));
             const [items, setItems] = useState([
@@ -148,7 +148,7 @@ const Purpose = () => {
                 setItems={setItems}
                 theme="DARK"
                 onSelectItem={(item) => {
-                  console.log(item);
+                  // console.log(item);
                   setValue('hiringGoal', item.value);
                 }}
                 labelStyle={{
@@ -208,7 +208,7 @@ const Purpose = () => {
               name="projectType"
               control={control}
               render={({field}) => {
-                console.log('field projectType', field);
+                // console.log('field projectType', field);
                 const [open, setOpen] = useState(false);
                 const [pickerValue, setPickerValue] = useState(getValues('projectType'));
                 const [items, setItems] = useState([
@@ -245,7 +245,7 @@ const Purpose = () => {
                     setItems={setItems}
                     theme="DARK"
                     onSelectItem={(item) => {
-                      console.log(item);
+                      // console.log(item);
                       setValue('projectType', item.value);
                     }}
                     zIndex={2000}
@@ -262,7 +262,7 @@ const Purpose = () => {
               name="budget"
               control={control}
               render={({field}) => {
-                console.log('field budget', field);
+                // console.log('field budget', field);
                 const [open, setOpen] = useState(false);
                 const [pickerValue, setPickerValue] = useState(null);
                 const [items, setItems] = useState([
@@ -302,7 +302,7 @@ const Purpose = () => {
                     setItems={setItems}
                     theme="DARK"
                     onSelectItem={(item) => {
-                      console.log(item);
+                      // console.log(item);
                       setValue('budget', item.value);
                     }}
                     zIndex={1000}
@@ -392,7 +392,7 @@ const Info = ({purpose}) => {
           },
         },
       };
-  console.log('registerOptions INFO', registerOptionsInfo, registerOptionsInfo.email, registerOptionsInfo.firstName )
+  // console.log('registerOptions INFO', registerOptionsInfo, registerOptionsInfo.email, registerOptionsInfo.firstName )
   return (
     <View style={[tw`flex-col-reverse md:flex-row w-[80vw] md:w-[500px] `]}>
       <Animated.Image
@@ -539,7 +539,7 @@ const Info = ({purpose}) => {
           name="state"
           control={control}
           render={({field}) => {
-            console.log('field state', field);
+            // console.log('field state', field);
             const [open, setOpen] = useState(false);
             const [pickerValue, setPickerValue] = useState(null);
             const [items, setItems] = useState(stateOptions);
@@ -555,7 +555,7 @@ const Info = ({purpose}) => {
                 theme="DARK"
                 placeholder="State"
                 onSelectItem={(item) => {
-                  console.log(item);
+                  // console.log(item);
                   setValue('state', item.value);
                 }}
                 zIndex={1000}
@@ -573,12 +573,12 @@ const Details = () => {
 
   const onError = (error) => console.log('errors',error);
   const onSubmit = (data) => {
-    console.log('sending data in slider')
+    // console.log('sending data in slider')
     Send(data);
-    console.log('data sent');
-    console.log('slackHook')
-    postToSlack(data);
-    console.log('slack sent')
+    // console.log('data sent');
+    // console.log('slackHook')
+    // postToSlack(data);
+    // console.log('slack sent')
   }
   const {
     register,
@@ -599,13 +599,13 @@ const Details = () => {
       },
     },
   }
-  console.log(
-    'registerOptions DETAILS',
-    registerOptionsDetail,
-    registerOptionsDetail.message,
+  // console.log(
+    // 'registerOptions DETAILS',
+    // registerOptionsDetail,
+    // registerOptionsDetail.message,
     // registerOptionsDetail.firstName,
     // registerOptionsDetail.positionDetails
-  );
+  // );
 
   return (
     <View style={[tw`flex-col md:flex-row w-[80vw] md:w-[500px]`]}>
@@ -673,7 +673,7 @@ const Slide = ({slide, scrollOffset, index}) => {
   const width = window.width;
   const slideWidth = width* 0.75;
   const height = window.height;
-  console.log('Slide index', index)
+  // console.log('Slide index', index)
   const animatedStyle = useAnimatedStyle(() => {
     const input = scrollOffset.value / slideWidth;
     const inputRange = [index - 1, index, index + 1];
@@ -759,7 +759,7 @@ const Slider = ({purpose, project}) => {
   const {window, } = useDimensions();
   const width = window.width;
   const slideWidth = width * 0.8;
-console.log('purpose, project', purpose, project)
+// console.log('purpose, project', purpose, project)
  const methods = useForm({
    mode: 'onBlur',
    defaultValues: {
