@@ -83,7 +83,9 @@ console.log('onTop in nav', navOnTop)
      blurType="light"
     blurAmount={10}
     reducedTransparencyFallbackColor="white"
-    style={[style,  tw.style(``, {zIndex: elevation})]}
+    style={[ {
+      webkitBackdropFilter:'saturate(180%) blur(3px)',
+    },style, tw.style(``, {zIndex: elevation})]}
     >
       {!mobileNav && (
         <Pressable

@@ -576,11 +576,14 @@ export const IntroSection = ({style, updatePosition, intensity=10, tint='dark', 
 return (
   <BlurView
    blurType="light"
-    blurAmount={10}
+    // blurAmount={10}
+    intensity={20}
     reducedTransparencyFallbackColor="blue"
     // intensity={intensity}
     // tint={tint}
-    style={style}
+    style={[ {
+      webkitBackdropFilter:'saturate(180%) blur(3px)',
+},style]}
     onLayout={(event) => {
       const {y} = event.nativeEvent.layout;
       updatePosition(y, 'intro');

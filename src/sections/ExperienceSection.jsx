@@ -36,7 +36,9 @@ return (
   <BlurView
     intensity={intensity}
     tint={tint}
-    style={style}
+    style={[ {
+      webkitBackdropFilter:'saturate(180%) blur(3px)',
+    },style]}
     onLayout={(event) => {
       const {y} = event.nativeEvent.layout;
       updatePosition(y, 'experience');

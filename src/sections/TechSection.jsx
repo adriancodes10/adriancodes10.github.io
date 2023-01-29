@@ -40,14 +40,16 @@ import useDimensions from '../hooks/useDimensions.jsx';
 // const skills = {
   
 // }
-export const TechSection = ({style, updatePosition, intensity=30, tint='dark', }) => {
+export const TechSection = ({style, updatePosition, intensity=20, tint='dark', }) => {
 const {window} = useDimensions();
 
 return (
   <BlurView
     intensity={intensity}
     tint={tint}
-    style={style}
+    style={[ {
+      webkitBackdropFilter:'saturate(180%) blur(3px)',
+    },style]}
     onLayout={(event) => {
       const {y} = event.nativeEvent.layout;
       updatePosition(y, 'tech');
