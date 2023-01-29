@@ -185,7 +185,7 @@ return (
       {/* </View> */}
       {/* <View style={tw``}> */}
       <View style={[tw``]}>
-        <Text style={[tw`text-2xl text-gray-100 flex justify-center`]}>
+        <Text style={[tw`text-2xl text-gray-100 flex justify-center font-bold`]}>
           Webpages
         </Text>
         <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>

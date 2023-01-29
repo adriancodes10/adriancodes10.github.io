@@ -291,7 +291,7 @@ export default function App() {
         ref={ref}
         onScroll={AnimScrollHandler}
         scrollEventThrottle={30}
-        pagingEnabled={true}
+        pagingEnabled={false}
         scrollToOverflowEnabled={true}>
         {/* <Animated.View
           entering={SlideInDown}
