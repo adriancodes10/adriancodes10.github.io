@@ -15,19 +15,19 @@ import Animated, {
 } from 'react-native-reanimated';
 
 const purposePng = require('../assets/emoji/billy-work.png');
-const purposePng2 = require('../assets/emoji/billy-open-arms.png');
-const purposePng3 = require('../assets/emoji/billy-briefcase.png');
-const checkbox= require('../assets/checkbox.png')
-const businessWoman404 = require('../assets/emoji/businesswoman-404.png')
-const businessWomanDesk = require('../assets/emoji/businesswoman-desk.png')
-const businessWomanHeart = require('../assets/emoji/businesswoman-heart.png')
+// const purposePng2 = require('../assets/emoji/billy-open-arms.png');
+// const purposePng3 = require('../assets/emoji/billy-briefcase.png');
+// const checkbox= require('../assets/checkbox.png')
+// const businessWoman404 = require('../assets/emoji/businesswoman-404.png')
+// const businessWomanDesk = require('../assets/emoji/businesswoman-desk.png')
+// const businessWomanHeart = require('../assets/emoji/businesswoman-heart.png')
 const businessWomanCharts = require('../assets/emoji/businesswoman-charts.png')
-const businessWomanPhone = require('../assets/emoji/businesswoman-smartphone.png')
+// const businessWomanPhone = require('../assets/emoji/businesswoman-smartphone.png')
 const businessWomanTablet = require('../assets/emoji/businesswoman-tablet.png')
-const businessWomanSettings = require('../assets/emoji/businesswoman-settings.png')
+// const businessWomanSettings = require('../assets/emoji/businesswoman-settings.png')
 
-const vR = require('../assets/coding/saly-vr.png');
-const rocket = require('../assets/coding/saly-rocket.png');
+// const vR = require('../assets/coding/saly-vr.png');
+// const rocket = require('../assets/coding/saly-rocket.png');
 
 
 import {

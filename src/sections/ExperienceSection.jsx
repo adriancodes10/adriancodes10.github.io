@@ -6,26 +6,26 @@ const { plugin } = require('twrnc');
 
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, Text, View,Image, Pressable, Button } from 'react-native';
-import Animated, { useSharedValue,
-  withTiming,
-  useAnimatedStyle,
-  Easing,
-  withSpring, FadeInDown, FlipInYLeft, ZoomInEasyDown} from 'react-native-reanimated';
-const xpPng= require("../assets/coding/laptop-profile.png");
-const gradHat = require("../assets/icons/graduation-hat-s.png");
+// import Animated, { useSharedValue,
+//   withTiming,
+//   useAnimatedStyle,
+//   Easing,
+//   withSpring, FadeInDown, FlipInYLeft, ZoomInEasyDown} from 'react-native-reanimated';
+// const xpPng= require("../assets/coding/laptop-profile.png");
+// const gradHat = require("../assets/icons/graduation-hat-s.png");
 
-const experience = {
-  appit: {},
-  teqshark: {},
-  freelance: {},
-  hrBlock: {},
-  zoomAuto: {},
+// const experience = {
+//   appit: {},
+//   teqshark: {},
+//   freelance: {},
+//   hrBlock: {},
+//   zoomAuto: {},
 
-}
-const education = {
-  highschool: {},
-  highereducation: {},
-}
+// }
+// const education = {
+//   highschool: {},
+//   highereducation: {},
+// }
 
 export const ExperienceSection = ({style, updatePosition, intensity=20, tint='dark', toggleResume}) => {
 

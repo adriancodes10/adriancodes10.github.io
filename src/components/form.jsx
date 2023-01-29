@@ -8,12 +8,12 @@ import { Text, View, TextInput, Button, Pressable, } from "react-native";
 import {StyleSheet} from 'react-native'
 import { useForm, Controller } from "react-hook-form";
 import tw from "../api/tailwind";
-import RNPickerSelect, {defaultStyles} from "react-native-picker-select";
+// import RNPickerSelect, {defaultStyles} from "react-native-picker-select";
 import useDimensions from "../hooks/useDimensions";
 import DropDownPicker from 'react-native-dropdown-picker'
 import stateOptions from "../utilities/constants";
 import sendMessage from "../firebase/burn";
-import postToSlack from "../hooks/slackwebhook";
+// import postToSlack from "../hooks/slackwebhook";
 
  const onError = (error) => console.log('errors',error);
 const onSubmit = (data) => {

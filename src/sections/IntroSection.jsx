@@ -21,20 +21,20 @@ import Animated, { useSharedValue, interpolate, cancelAnimation,
   withSpring, FadeInDown, FadeIn, Keyframe, FadeInUp, FadeOutRight, Layout} from 'react-native-reanimated';
   import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import useDimensions from '../hooks/useDimensions.jsx';
-import Form from '../components/form.jsx';
+// import Form from '../components/form.jsx';
 import Slider from '../components/slider.jsx';
 
   const coding = require('../assets/emoji/coding.png')
   const ecomShirt = require('../assets/coding/ecom-mobile-shirt.png')
-  const chart = require('../assets/coding/components/chart.png')
+  // const chart = require('../assets/coding/components/chart.png')
   // const desktopgallery = require('../assets/coding/components/desktop-gallery.png')
-  const imgList = require('../assets/coding/components/list.png')
-  const imgMobilechart = require('../assets/coding/components/mobile-piechart.png')
-  const imgStyling = require('../assets/coding/components/shapes-font.png')
-  const imgCharting = require('../assets/coding/components/piechart.png')
+  // const imgList = require('../assets/coding/components/list.png')
+  // const imgMobilechart = require('../assets/coding/components/mobile-piechart.png')
+  // const imgStyling = require('../assets/coding/components/shapes-font.png')
+  // const imgCharting = require('../assets/coding/components/piechart.png')
   // const styling = require('../assets/coding/components/shapes-font.png')
-  const imgBrowserpurle = require('../assets/coding/components/window-piechart-shape.png')
-  const imgBrowserred = require('../assets/coding/components/window-red-chart.png')
+  // const imgBrowserpurle = require('../assets/coding/components/window-piechart-shape.png')
+  // const imgBrowserred = require('../assets/coding/components/window-red-chart.png')
   const browserShapes = require('../assets/coding/components/window.png')
   const nft = require('../assets/coding/nft-touch.png')
  const webApp = require('../assets/coding/components/desktop-gallery.png')

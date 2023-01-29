@@ -7,70 +7,70 @@ import tw from '../api/tailwind.js';
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, Text, View,Image, Pressable, Button } from 'react-native';
 
-const ideaGirlPng = require('../assets/icons/idea-girl.png');
-const ideaBulbPng = require('../assets/icons/bulb-dynamic-color.png');
-const ideaBulbGoldPng = require('../assets/icons/bulb-front-premium.png');
-const firePng = require('../assets/icons/fire-matte.png');
-const playPng = require('../assets/icons/play-matte.png');
-const rocketPng = require('../assets/icons/rocket.png');
-const gearGoldPng = require('../assets/icons/settings-gold-gear.png');
-const shieldPng = require('../assets/icons/shield-matte.png');
+// const ideaGirlPng = require('../assets/icons/idea-girl.png');
+// const ideaBulbPng = require('../assets/icons/bulb-dynamic-color.png');
+// const ideaBulbGoldPng = require('../assets/icons/bulb-front-premium.png');
+// const firePng = require('../assets/icons/fire-matte.png');
+// const playPng = require('../assets/icons/play-matte.png');
+// const rocketPng = require('../assets/icons/rocket.png');
+// const gearGoldPng = require('../assets/icons/settings-gold-gear.png');
+// const shieldPng = require('../assets/icons/shield-matte.png');
 
 
-const thumbsUpPng = require('../assets/icons/thumb-up.png');
-const touchAnglePng = require('../assets/icons/touch-angle.png');
-const touchRightPng = require('../assets/icons/touch-right.png');
-const touchPng = require('../assets/icons/touch.png');
+// const thumbsUpPng = require('../assets/icons/thumb-up.png');
+// const touchAnglePng = require('../assets/icons/touch-angle.png');
+// const touchRightPng = require('../assets/icons/touch-right.png');
+// const touchPng = require('../assets/icons/touch.png');
 
 
 
 
 
-const heartGoldPng = require('../assets/icons/heart-gold.png')
-const heartAnglePng = require('../assets/icons/heart-angle.png')
-const heartFlatPng = require('../assets/icons/heart-like.png')
-const locationPointer = require('../assets/coding/location-pointer-color.png');
+// const heartGoldPng = require('../assets/icons/heart-gold.png')
+// const heartAnglePng = require('../assets/icons/heart-angle.png')
+// const heartFlatPng = require('../assets/icons/heart-like.png')
+// const locationPointer = require('../assets/coding/location-pointer-color.png');
 
 
 const webRocketPng = require('../assets/coding/laptop-rocket-blue.png');
 const webProfilePng = require('../assets/coding/laptop-profile.png');
 const webGalleryPng = require('../assets/coding/laptop-gallery.png');
 const mobileAppPng = require('../assets/coding/mobile-app-matte.png');
-const webSeoPng = require('../assets/coding/laptop-seo.png');
-const dashboardPng = require('../assets/coding/dashboard.png');
+// const webSeoPng = require('../assets/coding/laptop-seo.png');
+// const dashboardPng = require('../assets/coding/dashboard.png');
 const dashboardMattePng = require('../assets/coding/dashboard-matte.png');
 
-const web3Png = require('../assets/coding/nft.png');
-const ethPng = require('../assets/icons/tech/ethereum.png');
-const eth3dPng = require('../assets/coding/ethereum.png');
+// const web3Png = require('../assets/coding/nft.png');
+// const ethPng = require('../assets/icons/tech/ethereum.png');
+// const eth3dPng = require('../assets/coding/ethereum.png');
 const nftPng = require('../assets/coding/nft-icon.png');
 const nftTouch = require('../assets/coding/nft-touch.png');
-const metaverseConnect = require('../assets/coding/metaverse-connect.png');
-const metaverseGlasses = require('../assets/coding/metaverse-glasses.png');
-const metaverseGroup = require('../assets/coding/metaverse-group.png');
+// const metaverseConnect = require('../assets/coding/metaverse-connect.png');
+// const metaverseGlasses = require('../assets/coding/metaverse-glasses.png');
+// const metaverseGroup = require('../assets/coding/metaverse-group.png');
 
 
-const paymentPng = require('../assets/coding/payment-card-matte.png');
-const productBoxPng = require('../assets/coding/product-box.png');
+// const paymentPng = require('../assets/coding/payment-card-matte.png');
+// const productBoxPng = require('../assets/coding/product-box.png');
 const ecomMobilePng = require('../assets/coding/ecom-mobile-store.png');
-const ecomMobileRedPng = require('../assets/coding/ecom-mobile-store-angle-right.png');
-const ecomMobilePresentPng = require('../assets/coding/ecom-mobile-store-offer-angle.png');
+// const ecomMobileRedPng = require('../assets/coding/ecom-mobile-store-angle-right.png');
+// const ecomMobilePresentPng = require('../assets/coding/ecom-mobile-store-offer-angle.png');
 const ecomWebPng = require('../assets/coding/ecom-store-desktop.png');
-const ecomGrowthPng = require('../assets/coding/ecom-growth.png');
-const ecomWebAltPng = require('../assets/coding/ecom-laptop-cart.png');
+// const ecomGrowthPng = require('../assets/coding/ecom-growth.png');
+// const ecomWebAltPng = require('../assets/coding/ecom-laptop-cart.png');
 const ecomCartPng = require('../assets/coding/ecom-cart.png');
-const ecomWebPresentPng = require('../assets/coding/laptop-present.png');
-const productGirlPng = require('../assets/coding/product-girl-diamond.png');
+// const ecomWebPresentPng = require('../assets/coding/laptop-present.png');
+// const productGirlPng = require('../assets/coding/product-girl-diamond.png');
 
 
-const businessWebPng = require('../assets/coding/ecom-window-cash-briefcase.png');
+// const businessWebPng = require('../assets/coding/ecom-window-cash-briefcase.png');
 
 // const backendPng = require('../assets/coding/');
 
-const databasePng = require('../assets/coding/cloud-computing.png');
+// const databasePng = require('../assets/coding/cloud-computing.png');
 const databaseLeftPng = require('../assets/coding/cloud-computing-left.png');
 const apiPng = require('../assets/coding/cloud-computing-api.png');
-const cloudComputingPng = require('../assets/coding/cloud-computing-gold.png');
+// const cloudComputingPng = require('../assets/coding/cloud-computing-gold.png');
 
 const firebasePng = require('../assets/icons/tech/firebase.png');
 const amplifyPng = require('../assets/icons/tech/aws.png');
@@ -82,22 +82,22 @@ const amplifyPng = require('../assets/icons/tech/aws.png');
 const palettePng = require('../assets/icons/color-palette.png');
 const figmaPng = require('../assets/icons/tech/figma.png');
 const figmaSketchPng = require('../assets/icons/tech/figma-sketch-png.png');
-const imageMattePng = require('../assets/coding/image-matte.png');
-const image3dPng = require('../assets/coding/image-3d.png');
-const imagePinkPng = require('../assets/coding/image-pink.png');
+// const imageMattePng = require('../assets/coding/image-matte.png');
+// const image3dPng = require('../assets/coding/image-3d.png');
+// const imagePinkPng = require('../assets/coding/image-pink.png');
 
 
 const socialGirlPng = require('../assets/coding/socialmedia-girl.png');
-const selfiGirlPng = require('../assets/coding/socialmedia-selfie.png');
+// const selfiGirlPng = require('../assets/coding/socialmedia-selfie.png');
 const marketingPng = require('../assets/coding/advertisement.png');
-const likePng = require('../assets/coding/like.png');
+// const likePng = require('../assets/coding/like.png');
 
-const qrPng = require('../assets/coding/qr-code.png');
-const hashtagPng = require('../assets/icons/hash-dynamic-color.png');
+// const qrPng = require('../assets/coding/qr-code.png');
+// const hashtagPng = require('../assets/icons/hash-dynamic-color.png');
 
-const applePng = require('../assets/icons/tech/apple.png');
-const iosPng = require('../assets/icons/tech/ios.png');
-const androidPng = require('../assets/icons/tech/android.png');
+// const applePng = require('../assets/icons/tech/apple.png');
+// const iosPng = require('../assets/icons/tech/ios.png');
+// const androidPng = require('../assets/icons/tech/android.png');
 
 
 

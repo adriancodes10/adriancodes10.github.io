@@ -12,14 +12,14 @@ const reactImageAlt = require('../assets/icons/tech/react-icon.png');
 const rubySvg = require('../assets/icons/tech/ruby-flat.svg');
 const railsPng = require('../assets/icons/tech/rails.png');
 const solLight = require('../assets/icons/tech/solidity-light.png');
-const solPng = require('../assets/icons/tech/solidity.png');
-const pyPng = require('../assets/icons/tech/python.png');
-const pyColorPng = require('../assets/icons/tech/python-color.png');
+// const solPng = require('../assets/icons/tech/solidity.png');
+// const pyPng = require('../assets/icons/tech/python.png');
+// const pyColorPng = require('../assets/icons/tech/python-color.png');
 const pySvg = require('../assets/icons/tech/python-color.svg');
 const jsPng = require('../assets/icons/tech/js.png');
 const typescriptPng = require('../assets/icons/tech/typescript.png');
 const htmlPng = require('../assets/icons/tech/html.png');
-const htmlFlat = require('../assets/icons/tech/html-flat.png');
+// const htmlFlat = require('../assets/icons/tech/html-flat.png');
 const cssPng = require('../assets/icons/tech/css3.png');
 const vuePng = require('../assets/icons/tech/vue-3d.png');
 const swiftPng = require('../assets/icons/tech/swift.png');
@@ -36,10 +36,10 @@ import Animated, { useSharedValue,
 import RatingBar from '../components/TechRating.jsx';
 import useDimensions from '../hooks/useDimensions.jsx';
 
-  const skillsPng = require('../assets/icons/tech/react.png');
-const skills = {
+//   const skillsPng = require('../assets/icons/tech/react.png');
+// const skills = {
   
-}
+// }
 export const TechSection = ({style, updatePosition, intensity=30, tint='dark', }) => {
 const {window} = useDimensions();
 

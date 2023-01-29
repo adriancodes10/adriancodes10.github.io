@@ -25,20 +25,20 @@ import Animated, { useSharedValue,
 import { ScrollView } from 'react-native';
 
 const nuzerPng = require('../assets/screenshots/nuzer.png');
-const nuzerCatologPng = require('../assets/screenshots/nuzer-catolog.png');
+// const nuzerCatologPng = require('../assets/screenshots/nuzer-catolog.png');
 const schooladePng = require('../assets/screenshots/schoolade.png');
-const schooladeCardPng = require('../assets/screenshots/schoolade-card.png');
-const schooladeMockupsPng = require('../assets/screenshots/schoolade-mockups.png');
-const schooladeSelectorPng = require('../assets/screenshots/schoolade-selector.png');
+// const schooladeCardPng = require('../assets/screenshots/schoolade-card.png');
+// const schooladeMockupsPng = require('../assets/screenshots/schoolade-mockups.png');
+// const schooladeSelectorPng = require('../assets/screenshots/schoolade-selector.png');
 const businessPng = require('../assets/screenshots/business.png');
-const businessCardPng = require('../assets/screenshots/business-card.png');
+// const businessCardPng = require('../assets/screenshots/business-card.png');
 const businessSliderPng = require('../assets/screenshots/business-slider.png');
 const zoomautoPng = require('../assets/screenshots/zoom.png');
 const zoomautoAboutPng = require('../assets/screenshots/zoom-about.png');
 const nonProfitPng = require('../assets/screenshots/non-profit.png');
-const nonProfitGalleryPng = require('../assets/screenshots/non-profit-gallery.png');
+// const nonProfitGalleryPng = require('../assets/screenshots/non-profit-gallery.png');
 const nonProfitFeaturePng = require('../assets/screenshots/non-profit-feature.png');
-const nonProfitVsPng = require('../assets/screenshots/non-profit-vs.png');
+// const nonProfitVsPng = require('../assets/screenshots/non-profit-vs.png');
 const professionalPng = require('../assets/screenshots/professional-page.png');
 const professionalPortfolioPng = require('../assets/screenshots/professional-portfolio.png');
 // import nuzerImage from '../assets/portfolio/nuzer.png';
