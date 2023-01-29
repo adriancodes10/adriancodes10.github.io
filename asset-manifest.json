@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/static/js/app.17337786.chunk.js",
-    "app.js.map": "/static/js/app.17337786.chunk.js.map",
+    "app.js": "/static/js/app.a1c1843c.chunk.js",
+    "app.js.map": "/static/js/app.a1c1843c.chunk.js.map",
     "runtime~app.js": "/static/js/runtime~app.27401809.js",
     "runtime~app.js.map": "/static/js/runtime~app.27401809.js.map",
-    "static/js/2.d1759263.chunk.js": "/static/js/2.d1759263.chunk.js",
-    "static/js/2.d1759263.chunk.js.map": "/static/js/2.d1759263.chunk.js.map",
+    "static/js/2.2cae0daa.chunk.js": "/static/js/2.2cae0daa.chunk.js",
+    "static/js/2.2cae0daa.chunk.js.map": "/static/js/2.2cae0daa.chunk.js.map",
     "fonts/FontAwesome.ttf": "/./fonts/FontAwesome.ttf",
     "favicon-16.png": "/favicon-16.png",
     "favicon-32.png": "/favicon-32.png",
@@ -13,7 +13,7 @@
     "index.html": "/index.html",
     "manifest.json": "/manifest.json",
     "serve.json": "/serve.json",
-    "static/js/2.d1759263.chunk.js.LICENSE.txt": "/static/js/2.d1759263.chunk.js.LICENSE.txt",
+    "static/js/2.2cae0daa.chunk.js.LICENSE.txt": "/static/js/2.2cae0daa.chunk.js.LICENSE.txt",
     "static/media/2023_Resume.png": "/static/media/2023_Resume.156639ac.png",
     "static/media/2023_Resume.pdf": "/static/media/2023_Resume.65fc7be2.pdf",
     "static/media/adrian-gradient-alt.png": "/static/media/adrian-gradient-alt.ee60954a.png",
@@ -135,7 +135,6 @@
     "static/media/ruby-flat.svg": "/static/media/ruby-flat.720c8a73.svg",
     "static/media/saly-rocket.png": "/static/media/saly-rocket.4294f2d5.png",
     "static/media/saly-vr.png": "/static/media/saly-vr.76ac882f.png",
-    "static/media/scene.gltf": "/static/media/scene.ec0044e6.gltf",
     "static/media/schoolade-card.png": "/static/media/schoolade-card.fdee6f5d.png",
     "static/media/schoolade-mockups.png": "/static/media/schoolade-mockups.f6203f57.png",
     "static/media/schoolade-selector.png": "/static/media/schoolade-selector.b05f1285.png",
@@ -179,7 +178,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.27401809.js",
-    "static/js/2.d1759263.chunk.js",
-    "static/js/app.17337786.chunk.js"
+    "static/js/2.2cae0daa.chunk.js",
+    "static/js/app.a1c1843c.chunk.js"
   ]
 }
