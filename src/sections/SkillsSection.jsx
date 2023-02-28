@@ -132,10 +132,10 @@ return (
         <Text style={[tw`text-2xl text-gray-100 font-bold flex justify-center`]}>
           Apps
         </Text>
-        <Text style={[tw`text-base text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-base text-gray-200 font-bold flex justify-center`]}>
           Cross Platform + Web App
         </Text>
-        <Text style={[tw`text-base text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-base text-gray-200 font-bold flex justify-center`]}>
           iPhone + Android
         </Text>
         <View style={tw`flex-row justify-evenly`}>
@@ -151,10 +151,10 @@ return (
         <Text style={[tw`text-2xl text-gray-100 flex font-bold justify-center`]}>
           Front End
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 flex font-bold justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 flex font-bold justify-center`]}>
           UX/UI Design + Logo Design
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 flex font-bold justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 flex font-bold justify-center`]}>
           Mockups + WireFrames
         </Text>
         <View
@@ -172,10 +172,10 @@ return (
         <Text style={[tw`text-2xl text-gray-100 flex font-bold justify-center`]}>
           Backend
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 flex font-bold justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 flex font-bold justify-center`]}>
           Hosting + Database integration
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 font-bold flex justify-center`]}>
           Postgres + API's
         </Text>
         <View style={tw`flex-row justify-evenly`}>
@@ -190,7 +190,7 @@ return (
         <Text style={[tw`text-2xl text-gray-100 flex justify-center font-bold`]}>
           Webpages
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 font-bold flex justify-center`]}>
           Static + Dynamic
         </Text>
         <View style={tw`flex-row justify-evenly`}>
@@ -202,13 +202,13 @@ return (
         <Text style={[tw`text-2xl text-gray-100 font-bold flex justify-center`]}>
           Web3
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 font-bold flex justify-center`]}>
           Dapps + Smart Contracts
         </Text>
         <Text style={[tw`text-lg text-gray-100 font-bold flex justify-center`]}>
           NFTs + Token
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 font-bold flex justify-center`]}>
           Blockchain Integrations
         </Text>
         <View style={tw`flex-row justify-evenly`}>
@@ -221,7 +221,7 @@ return (
         <Text style={[tw`text-2xl text-gray-100 flex font-bold justify-center`]}>
           Integrations
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 font-bold flex justify-center`]}>
           Google Firebase + AWS Amplify
         </Text>
         <View style={tw`flex-row justify-evenly`}>
@@ -235,10 +235,10 @@ return (
         <Text style={[tw`text-2xl text-gray-100 flex font-bold justify-center`]}>
           Social Media Martketing
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 font-bold flex justify-center`]}>
           Facebook Business + Instagram
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 font-bold flex justify-center`]}>
           Google Business
         </Text>
         <View style={tw`flex-row justify-evenly`}>
@@ -252,7 +252,7 @@ return (
         <Text style={[tw`text-2xl text-gray-100 font-bold flex justify-center`]}>
           Ecommerce
         </Text>
-        <Text style={[tw`text-lg text-bluelogo-800 font-bold flex justify-center`]}>
+        <Text style={[tw`text-lg text-gray-200 font-bold flex justify-center`]}>
           Mobile + Web
         </Text>
         <View style={tw`flex-row justify-evenly`}>
